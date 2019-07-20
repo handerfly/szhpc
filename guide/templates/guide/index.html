@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+
+<div class="main-body">
+  <div class="bouti-tit">
+    <div class="bouti-link bouti-link-intro" style="background-image: url({% static 'img/about/img.jpg'%});">
+			<div class="boutiCon">
+				<h3>{{title}}</h3>
+			</div>
+			<div class="boutiConBg"></div>
+		</div>
+	</div>
+  
+  <div class="content">
+      <section class="sub-header" style="display:none;">
+  			<section class="mobSecNav">
+                <img id="subNavlogo" src="{% static 'img/mnav2.png'%}" style="padding-bottom:6px;"></section>
+  			<section class="mobSecNavMenu">
+  				<ul>
+  					<li><a href="news.html">{{title}}</a></li>
+  				</ul>
+  			</section>
+        <section class="secNav">
+  				<ul>
+  					<li  class="cur"><a href="news.html">{{title}}</a></li>
+  				</ul>
+  			</section>
+  		</section>
+      <div class="col_lg_10 top"></div>
+      <div class="col_lg_10">
+        <div class="mainContent">
+          <div class="introTit clearfix">
+<!--            <div class="introTitImg"></div>-->
+            <h2>{{title}}</h2>
+          </div>
+          <div class="article">
+            {{guide_obj.content|safe}}
+          </div>
+        </div>
+      </div>
+
+
+    </section>
+    <div class="clearfix"></div>
+  </div>
+</div>
+
+{% endblock %}

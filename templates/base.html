@@ -1,0 +1,170 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>{% block title %}{{title}} - 深圳市气象局高性能计算平台{% endblock %}</title>
+
+    <link href="{% static 'css/icon.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/base.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/index.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/inner.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+
+
+    <script src="{% static 'js/jquery-3.2.1.min.js' %}" type="text/javascript"></script>
+    <!--[if lt IE 9]>
+      <script src="{% static 'js/html5.js' %}" type="text/javascript"></script>
+      <script src="{% static 'js/response.min.js' %}" ></script>
+    <![endif]-->
+{% block head_extends %}{% endblock %}
+
+  </head>
+  
+  {% block body %}<body>{% endblock %}
+    <header class="header">
+      <section>
+        <div class="topLine"></div>
+        <section class="subNav yahei clearfix">
+          <section class="ssubNav">
+            <ul class="subnavLeft">
+              <li>
+                <a href="#">欢迎来到深圳市气象局高性能计算平台</a></li>
+            </ul>
+            <div class="subNavRight" style="padding-top:0px;">
+              <ul style="display:inline-block;line-height:10px;padding-top:5px;padding-bottom:4px;float:right;">
+                <li style="float:left;">
+                  <a href="#" style="font-size:12px;">联系我们</a></li>
+              </ul>
+            </div>
+          </section>
+          <section class="mainWrap mainWrap02 noline">
+            <ul class="subnavLeft">
+              <li>
+                <a href="#">深圳市气象局高性能计算平台</a></li>
+            </ul>
+            <ul class="subNavRight">
+              <li>
+                <a href="#">邮箱</a></li>
+              <li>
+                <a href="#">服务热线：62751023</a></li>
+            </ul>
+          </section>
+          <!-- search -->
+          <section class="clearfix"></section>
+          <!-- for mobile [begin] -->
+          <section id="mobileNav" class="onlymobileshow clearfix">
+            <div style="background-color:#fff;clear:both;padding-bottom:7px;line-height:30px;font-size:16px; color:#000;">
+              <ul>
+                <li class="nav_first">
+                  <a href="{% url 'hpc:hpc_index'%}">平台概况</a></li>
+                <li>
+                  <a href="resource.html">资源环境</a></li>
+                <li>
+                  <a href="guide.html">使用指南</a></li>
+                <li>
+                  <a href="download.html">常用下载</a></li>
+                <li>
+                  <a href="stat">运行情况</a></li>
+                <li>
+                  <a href="{% url 'hpc:hpc_news'%}">联系我们</a></li>
+              </ul>
+            </div>
+          </section>
+          <!-- for mobile [end] --></section>
+        <section class="topWrap clearfix">
+          <section class="mainWrap">
+            <span class="logo">
+              <a href="{% url 'hpc:hpc_index'%}" title="北京大学">
+                <img src="{% static 'img/pkulogo_red.png' %}"></a>
+              <a class="xkb_logo" href="{% url 'hpc:hpc_index'%}" title="高性能计算平台">高性能计算平台</a></span>
+          </section>
+          <section class="nav yahei clearfix noMobileShow" style="clear:both;">
+            <ul id="nav">
+              <li class="nav_first">
+                <a id="about" href="{% url 'hpc:hpc_index'%}" class="{% if request.path == '/hpc/' %}current{% endif %}">
+                  <span class="nav_long">平台概况</span>
+                  <span class="nav_short short">平台概况</span></a>
+                <ul class="sub-nav" style="display: none;">
+                  <li>
+                    <a href="{% url 'hpc:hpc_about'%}">平台简介</a></li>
+                </ul>
+              </li>
+              <li>
+                <a id="resource" href="{% url 'resource:resource_index'%}" class="{% if request.path == '/resource/' %}current{% endif %}">
+                  <span class="nav_long">资源环境</span>
+                  <span class="nav_short short">资源环境</span></a>
+                <ul class="sub-nav" style="display: none;">
+                  <li>
+                    <a href=" resource.html">硬件资源</a></li>
+                  <li>
+                    <a href=" resource_1.html">软件资源</a></li>
+                </ul>
+              </li>
+              <li>
+                <a id="guide" href="{% url 'guide:guide_index'%}" class="{% if request.path == '/guide/' %}current{% endif %}">
+                  <span class="nav_long">使用指南</span>
+                  <span class="nav_short">使用指南</span></a>
+                <ul class="sub-nav" style="display: none;">
+                  <li><a href="guide_4.html">使用教程</a></li>
+                  <li><a href="guide_5.html">常见问题</a></li>
+                </ul>
+              </li>
+
+              <li>
+                <a id="download" href="{% url 'download:download_index'%}" class="{% if request.path == '/download/' %}current{% endif %}">
+                  <span class="nav_long">常用下载</span>
+                  <span class="nav_short short">常用下载</span></a>
+                <ul class="sub-nav" style="display: none;">
+                  <li>
+                    <a href=" download_2.html">技术文档</a></li>
+                  <li>
+                    <a href=" download_3.html">培训资料</a></li>
+                </ul>
+              </li>
+              <li>
+                <a id="stat" href="{% url 'status:status_index'%}" class="{% if request.path == '/status/' %}current{% endif %}">
+                  <span class="nav_long">运行情况</span>
+                  <span class="nav_short">运行情况</span></a>
+              </li>
+              <li>
+                <a id="contact" href="{% url 'contact:contact_index'%}" class="{% if request.path == '/contact/' %}current{% endif %}">
+                  <span class="nav_long">联系我们</span>
+                  <span class="nav_short"></span>
+                </a>
+              </li>
+            </ul>
+          </section>
+        </section>
+      </section>
+      <script>$(".header .logo a:first-child").hover(function() {
+          $(this).children("img").attr("src", "{% static 'img/pkulogo_grey.png' %} ");
+        },
+        function() {
+          $(this).children("img").attr("src", "{% static 'img/pkulogo_red.png' %}");
+        });</script>
+    </header>
+{% block content %}
+
+{% endblock %}
+	<div id="gotoTop" style="display: block;" class="">顶部</div>
+<footer class="footer">
+  <section class="fot_bot">
+    <span class="copyright">版权所有©北京大学高性能计算平台</span>
+    <span class="addr">地址：理科一号楼1124房间</span>
+    <span class="postcode">邮编：100871</span>
+    <span class="email">邮箱：hpc@pku.edu.cn</span>
+    <span class="telephone">电话：010-62751023</span>
+    <span class="tech-sup">技术支持：北京大学计算中心</span>
+    </section>
+</footer>
+    {% block script_extends %}{% endblock %}
+    <script src="{% static 'js/comm.js' %}" type="text/javascript"></script>
+    <script src="{% static 'js/inner.js' %}" type="text/javascript"></script>
+
+  </body>
+
+</html>

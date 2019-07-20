@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+
+<div class="main-body">
+  <div class="bouti-tit">
+    <div class="bouti-link bouti-link-intro" style="background-image: url({% static 'img/about/img.jpg'%});">
+			<div class="boutiCon">
+				<h3>新闻动态</h3>
+			</div>
+			<div class="boutiConBg"></div>
+		</div>
+	</div>
+  
+  <div class="content">
+      <section class="sub-header" style="display:none;">
+  			<section class="mobSecNav">
+                <img id="subNavlogo" src="{% static 'img/mnav2.png'%}" style="padding-bottom:6px;"></section>
+  			<section class="mobSecNavMenu">
+  				<ul>
+  					<li><a href="news.html">最新动态</a></li>
+  				</ul>
+  			</section>
+        <section class="secNav">
+  				<ul>
+  					<li  class="cur"><a href="news.html">最新动态</a></li>
+  				</ul>
+  			</section>
+  		</section>
+      <div class="col_lg_10 top"></div>
+      <div class="col_lg_10">
+        <div class="mainContent">
+          <div class="introTit clearfix">
+            <div class="introTitImg"></div>
+            <h2>新闻动态</h2>
+          </div>
+          <div class="article">
+            <ul id="newslist" class="item-list">
+			<li><a href="http://news.pku.edu.cn/jxky/7e99471efcf94394bf667b5b3023e7e1.htm">毛有东课题组与合作者在《自然》发表NLRP3炎症小体激活新机制[2019-06-14]</a></span></li>
+			<li><a href="http://news.pku.edu.cn/jxky/dc1793cd6d9a4bfdb9181793ed9bc003.htm">深研院化生学院李子刚/尹丰课题组利用硫盐稳定多肽在蛋白半胱氨酸的选择性共价修饰领域取得新进展[2019-03-27]</a></span></li>
+			<li><a href="https://www.sciencedirect.com/science/article/pii/S0092867419302028?via%3Dihub">Cell | 高宁/金奇合作团队解析一种细菌可收缩注射系统的精细结构[2019-03-22]</a></span></li>
+			<li><a href="http://news.pku.edu.cn/jxky/8f118474ddad43028a51a7816f8481d3.htm">生命科学学院高宁课题组与合作者在《自然•结构与分子生物学》发表论文揭示ISWI蛋白催化染色质重塑的分子机理[2019-03-20]</a></span></li>
+			<li><a href="http://news.pku.edu.cn/jxky/140d28c3e9ff4d67b6d68e5dd7bcdae4.htm">广东省纳米微米材料研究重点实验室在有机小分子致介孔沸石领域取得新进展[2019-03-19]</a></span></li>
+			<li><a href="http://news.pku.edu.cn/jxky/a0b8e14e09784eb9bcc83c75de54db17.htm">深研院化生学院李子刚/尹丰课题组利用稳定多肽在表观遗传学抑制剂领域取得新进展[2019-03-12]</a></span></li>
+			<li><a href="http://news.pku.edu.cn/jxky/0aa8aad7d04d4b3ca01d6205aa53bcb3.htm">张亚文/严纯华课题组与合作者在常温常压水相电催化合成氨领域获得突破[2019-03-09]</a></span></li>
+            <li><a href="http://news.pku.edu.cn/xwzh/8cabae56f2944bd48c4f7f9aef91866b.htm">北京大学研究成果入选“2018年度中国科学十大进展”[2019-02-27]</a></span></li>
+            <li><a href="http://pkunews.pku.edu.cn/xxfz/2018-11/20/content_305163.htm">物理学院肖云峰/龚旗煌课题组在微腔非线性光学研究中取得重要突破[2018-11-20]</a></span></li>
+            <li><a href="http://pkunews.pku.edu.cn/xxfz/2018-11/14/content_305080.htm">物理学院毛有东课题组在Nature发文 蛋白质机器动力学研究取得重大突破[2018-11-14]</a></span></li>
+            <li><a href="http://pkunews.pku.edu.cn/xwzh/2018-10/26/content_304753.htm">北大高性能计算平台“未名生科一号”超算系统上线运行[2018-10-26]</a></span></li>
+            <li><a href="achievement_3.html">迎校庆 高性能计算结硕果 奖励来袭 [2018-05-03]</a></span></li>
+            <li><a href="http://pkunews.pku.edu.cn/xwzh/2018-05/02/content_302365.htm">迎校庆 高性能计算平台建设喜获多项突破 [2018-05-02]</a></span></li>
+            <li><a href="http://pkunews.pku.edu.cn/xwzh/2018-01/04/content_300915.htm">北京大学举行高性能计算校级公共平台启用揭牌仪式 [2018-01-03]</a></span></li>
+            <!--li><a href="http://pkunews.pku.edu.cn/xwzh/2018-01/04/content_300915.htm">热烈祝贺高性能计算校级公共平台正式启用 [2018-01-03]</a></span></li-->
+            <li><a href="http://pkunews.pku.edu.cn/xwzh/2017-12/11/content_300592.htm">北京高校高性能计算技术研讨会在北京大学举行 [2017-12-11]</a></span></li>
+            <li><a href="http://pkunews.pku.edu.cn/xwzh/2017-11/17/content_300216.htm">北京大学高性能计算平台有奖征名活动获奖作品揭晓 [2017-11-17]</a></span></li>
+            <li><a href="http://pkunews.pku.edu.cn/xwzh/2017-09/21/content_299280.htm">北京大学高性能计算平台建设项目顺利通过验收 [2017-9-19]</a></span></li>
+            <li><a href="JavaScript:void()">联想深腾X8800安装完毕，北京大学高性能计算平台超级计算机系统即将启用 [2017-9-12]</a></span></li>
+            <li><a href="JavaScript:void()">高性能计算平台超级计算机系统整装待发，国内率先采用常温水冷散热技术，节能高效，PUE达1.1，效率达92% [2017-9-12]</a></span></li>
+            <li><a href="JavaScript:void()">高性能计算平台第二套集群“冷冻电镜平台附属计算设施项目”通过立项论证 [2017-9-8]</a></span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+
+    </section>
+    <div class="clearfix"></div>
+  </div>
+</div>
+
+{% endblock %}

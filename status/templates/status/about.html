@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+
+{% block body %}<body>{% endblock %}
+<div class="main-body">
+  <div class="bouti-tit" style="height: 380px;">
+    <div class="bouti-link bouti-link-intro" style="background-image: url({% static 'img/about/img.jpg'%});">
+			<div class="boutiCon" style="top: 150px;">
+				<h3>平台概况</h3>
+			</div>
+			<div class="boutiConBg" style="top: 150px;"></div>
+		</div>
+	</div>
+  
+  <div class="content-header">
+      <section class="sub-header">
+  			<section class="mobSecNav"><img id="subNavlogo" src="{% static 'img/mnav2.png' %}" style="padding-bottom:6px;"></section>
+  			<section class="mobSecNavMenu">
+  				<ul>
+  					<li><a href="http://hpc.pku.edu.cn/about.html">平台简介</a></li>
+  					<li><a href="http://hpc.pku.edu.cn/about_organization.html">机构设置</a></li>
+					<li><a href="http://hpc.pku.edu.cn/about_rule.html">管理办法</a></li>
+  				</ul>
+  			</section>
+        			<section class="secNav">
+  				<ul>
+  					<li class="cur"><a href="http://hpc.pku.edu.cn/about.html">平台简介</a></li>
+  					<li><a href="http://hpc.pku.edu.cn/about_organization.html">机构设置</a></li>
+					<li><a href="http://hpc.pku.edu.cn/about_rule.html">管理办法</a></li>
+  				</ul>
+  			</section>
+  		</section>
+  </div>
+  <div class="clearfix"></div>
+   <div class="content">
+      <div class="col_lg_10 top"></div>
+      <div class="col_lg_7">
+        <div class="mainContent">
+          <div class="introTit clearfix">
+            <div class="introTitImg" style="background-image: url({% static 'img/about/img_small9.jpg'%});"></div>
+            <h2>平台简介</h2>
+          </div>
+          <div class="article">
+            <p>高性能计算平台是一所大学重要的科研支撑条件，北京大学高度重视科学计算在提高科学研究水平、推动工程技术创新中的革命性作用。1963年，当北京大学拥有第一台计算机时，就在全国高校率先成立计算中心，组建专门技术团队服务全校师生。2001年学校汇集多个领域的专家成立了北京大学科学与工程计算中心，搭建了一个具有多学科交叉性质的研究平台，以专家学者为核心，以计算中心技术团队为支撑，先后于2001年和2005年购置两台计算能力分别为960亿次和1.638万亿次的高性能计算机，服务全校教学科研，取得良好效益。为实现校级平台和院系二级平台的资源整合和高效使用，降低科研成本，加强学科建设，北京大学以计算中心技术团队为支撑，于2016年成立北京大学高性能计算校级公共平台。</p>
+
+			<p>平台的主要功能是面向全校提供高性能科学与工程计算服务，满足各学科领域对于大规模数据处理和大规模科学计算的需求。平台的主要任务是建设科学合理的管理体制、可持续发展的体系架构、专业稳定的技术队伍、高效先进的计算环境、丰富全面的软件资源、节能环保功能完善的基础设施、合理便捷的收费机制、合作共享的运维体系，实现校级平台和院系二级平台的资源整合和高效使用，整体提升学校的服务能力，降低科研成本。</p>
+
+			<p>平台实行专家委员会监督下的主任负责制，通过明确专家委员会、平台主任及主任工程师的责权分工，实现资源分配、行政管理等权力的适度分离，确保平台的正常运行和资源的合理分配。</p>
+
+			<p>平台建设将本着经济、节能、环保的原则，通过分步建设方式最终建设一个多软/硬件支撑、多运行环境、用户管理统一、支持多学科科研应用软件运行的系统平台。先后建设了两套集群“未名一号”及“未名生科一号”，计算峰值分别达411 TFLOPS及587.8 TFLOP。</p>
+
+			<p>平台主要应用领域包括：数学、深度学习、大气海洋环境、新能源新材料、天文地球物理、生物医药健康等，涉及数学、统计学、力学、物理学、化学、生物学、地球科学、航天航空科学、计算机科学等多学科。</p>
+
+			<p>高性能计算校级公共平台将竭诚为全校各领域的高性能计算用户提供高质量的高性能计算服务，欢迎大家使用！<br></p>
+
+          </div>
+        </div>
+      </div>
+      <div class="col_lg_3">
+        <div class="rightBg" style="background-image: url({% static 'img/about/img_gxn211.jpg'%});"></div>
+      </div>
+    
+    <div class="clearfix"></div>
+  </div>
+</div>
+
+{% endblock %}
