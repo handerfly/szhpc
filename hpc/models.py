@@ -13,3 +13,4 @@ class About(models.Model):
 
     class Meta:
         verbose_name_plural = '平台概况'
+        db_table = "About"

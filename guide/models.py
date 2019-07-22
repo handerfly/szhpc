@@ -13,3 +13,4 @@ class Guide(models.Model):
 
     class Meta:
         verbose_name_plural = '使用说明'
+        db_table = "Guide"

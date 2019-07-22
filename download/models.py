@@ -13,3 +13,4 @@ class Download(models.Model):
 
     class Meta:
         verbose_name_plural = '常用下载'
+        db_table = "Download"

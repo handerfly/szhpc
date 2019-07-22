@@ -13,3 +13,4 @@ class Contact(models.Model):
 
     class Meta:
         verbose_name_plural = '联系我们'
+        db_table = "Contact"

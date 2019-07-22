@@ -26,3 +26,4 @@ class Resource(models.Model):
 
     class Meta:
         verbose_name_plural = "资源环境"
+        db_table = "Resource"

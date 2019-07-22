@@ -87,7 +87,7 @@ DATABASES = {
         'NAME': 'hpc',
         'USER': 'hpc',
         'PASSWORD':'hpc@123',
-        'HOST': 'localhost',
+        'HOST': '10.11.13.48',
         'PORT': 3306,
 }
 }
@@ -129,7 +129,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
+
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'collected_static')
+
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
