@@ -51,7 +51,7 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
+    #'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -83,13 +83,22 @@ WSGI_APPLICATION = 'szhpc.wsgi.application'
 
 DATABASES = {
         'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'hpc',
-        'USER': 'hpc',
-        'PASSWORD':'hpc@123',
-        'HOST': '10.11.13.48',
-        'PORT': 3306,
-}
+            'ENGINE': 'django.db.backends.mysql',
+            'NAME': 'hpc',
+            'USER': 'hpc',
+            'PASSWORD':'hpc@123',
+            'HOST': '10.11.13.48',
+            'PORT': 3306,
+        },
+        'db_gridview': {   # 配置第二个数据库节点名称
+                'ENGINE': 'django.db.backends.mysql',
+                'NAME': 'gv_local',
+                'USER': 'root',
+                'PASSWORD': 'root123',
+                'HOST': '10.151.225.2',
+                'PORT': '3309',
+        },
+
 }
 
 

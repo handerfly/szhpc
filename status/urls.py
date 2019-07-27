@@ -20,6 +20,10 @@ from . import views
 app_name = 'status'
 urlpatterns = [
     path('', views.index, name='status_index'),
-    # path('about', views.about, name='hpc_about'),
-    # path('news', views.news, name='hpc_news'),
+
+    path('memory_chart', views.memory_chart, name='memory_chart'),
+    path('cpu_chart', views.cpu_chart, name='cpu_chart'),
+    path("group_cpu_chart", views.group_cpu_chart, name="group_cpu_chart"),
+    path("group_memory_chart", views.group_memory_chart, name="group_memory_chart"),
+
 ]

@@ -5,7 +5,7 @@
 <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 {% endblock %}
 
-<div class="main-body">
+<div class="main-body" style="min-hight:1600px">
   <div class="content">
       <section class="sub-header" style="display:none;">
   			<section class="mobSecNav">
@@ -24,313 +24,178 @@
 
 
 <div class="col_lg_12">
-        <div class="mainContent">
-          <div class="introTit clearfix">
+    <div class="mainContent">
+        <div class="introTit clearfix">
             <h2>运行状态</h2>
-          </div>
-
         </div>
-      </div>
 
+    </div>
+ </div>
 
  <div class="row">
-  <div class="col-md-4">
-    <h1>节点使用率</h1>
-      <div id="container" ></div>
+  <div class="col-md-6">
+    <h1>CPU使用率</h1>
+      <div id="CPU" ></div>
   </div>
-  <div class="col-md-4">
+  <div class="col-md-6">
       <h1>内存使用率</h1>
-      <div id="container2"></div>
-  </div>
-  <div class="col-md-4">
-    <h1>作业</h1>
-      <div id="container3"></div>
+      <div id="Memory"></div>
   </div>
 </div>
+
       <hr>
-      <div class="row">
-  <div class="col-md-4">
-    <h1>节点使用率</h1>
+<div class="row">
+  <div class="col-md-6">
+    <h1>分组CPU使用率</h1>
+      <div id="group_cpu" ></div>
+  </div>
+  <div class="col-md-6">
+      <h1>分组内存使用率</h1>
+      <div id="group_memory"></div>
+  </div>
+</div>
+
+      <hr>
+<div class="row">
+  <div class="col-md-6">
+    <h1>存储使用率</h1>
       <div id="line21" ></div>
   </div>
-  <div class="col-md-4">
-      <h1>内存使用率</h1>
+  <div class="col-md-6">
+      <h1>运行队列</h1>
       <div id="line22"></div>
-  </div>
-  <div class="col-md-4">
-    <h1>作业</h1>
-      <div id="line23"></div>
   </div>
 </div>
 
-
-
-
-
-
-
-    </section>
     <div class="clearfix"></div>
   </div>
 </div>
 
 {% endblock %}
+
 {% block script_extends %}
+
 <script src="http://cdn.highcharts.com.cn/highcharts/highcharts.js"></script>
- <script>
-        // 图表配置
-        var options_bar = {
-            chart: {
-                type: 'bar'                          //指定图表的类型，默认是折线图（line）
-            },
-            title: {
-                text: '我的第一个图表'                 // 标题
-            },
-            xAxis: {
-                categories: ['苹果', '香蕉', '橙子']   // x 轴分类
-            },
-            yAxis: {
-                title: {
-                    text: '吃水果个数'                // y 轴标题
-                }
-            },
-            series: [{                              // 数据列
-                name: '小明',                        // 数据列名
-                data: [1, 0, 4]                     // 数据
-            }, {
-                name: '小红',
-                data: [5, 7, 3]
-            }]
-        };
-        // 图表初始化函数
-        var chart_bar = Highcharts.chart('container', options_bar);
+<script type="text/javascript">
+     Highcharts.setOptions({ global: { useUTC: false } });
+</script>
 
-        // 图表配置
-        var options_line = {
-            chart: {
-                type: 'line'                          //指定图表的类型，默认是折线图（line）
-            },
-            title: {
-                text: '我的第一个图表'                 // 标题
-            },
-            xAxis: {
-                categories: ['苹果', '香蕉', '橙子']   // x 轴分类
-            },
-            yAxis: {
-                title: {
-                    text: '吃水果个数'                // y 轴标题
-                }
-            },
-            series: [{                              // 数据列
-                name: '小明',                        // 数据列名
-                data: [1, 0, 4]                     // 数据
-            }, {
-                name: '小红',
-                data: [5, 7, 3]
-            }]
-        };
-        // 图表初始化函数
-        var chart_line = Highcharts.chart('container2', options_line);
+<script src="{% static 'ajax/cpu.js'%}"></script>
+<script src="{% static 'ajax/memory.js'%}"></script>
+<script src="{% static 'ajax/group_cpu.js'%}"></script>
+<!--<script src="{% static 'ajax/group_memory.js'%}"></script>-->
 
-        // 图表配置
-        var options_bar = {
-            chart: {
-                type: 'bar'                          //指定图表的类型，默认是折线图（line）
-            },
-            title: {
-                text: '我的第一个图表'                 // 标题
-            },
-            xAxis: {
-                categories: ['苹果', '香蕉', '橙子']   // x 轴分类
-            },
-            yAxis: {
-                title: {
-                    text: '吃水果个数'                // y 轴标题
-                }
-            },
-            series: [{                              // 数据列
-                name: '小明',                        // 数据列名
-                data: [1, 0, 4]                     // 数据
-            }, {
-                name: '小红',
-                data: [5, 7, 3]
-            }]
-        };
-        // 图表初始化函数
-        var chart_bar2 = Highcharts.chart('container3', options_bar);
+<script>
 
-
-
-        var chart = Highcharts.chart('line21', {
-    chart: {
-        type: 'spline'
-    },
-    title: {
-        text: '风速变化趋势图'
-    },
-    subtitle: {
-        text: '2009年10月6日和7日两地风速情况'
-    },
-    xAxis: {
-        type: 'datetime',
-        labels: {
-            overflow: 'justify'
-        }
-    },
-    yAxis: {
-        title: {
-            text: '风 速 (m/s)'
-        },
-        min: 0,
-        minorGridLineWidth: 0,
-        gridLineWidth: 0,
-        alternateGridColor: null,
-        plotBands: [{ // Light air
-            from: 0.3,
-            to: 1.5,
-            color: 'rgba(68, 170, 213, 0.1)',
-            label: {
-                text: '轻空气',
-                style: {
-                    color: '#606060'
-                }
-            }
-        }, { // Light breeze
-            from: 1.5,
-            to: 3.3,
-            color: 'rgba(0, 0, 0, 0)',
-            label: {
-                text: '微风',
-                style: {
-                    color: '#606060'
-                }
-            }
-        }, { // Gentle breeze
-            from: 3.3,
-            to: 5.5,
-            color: 'rgba(68, 170, 213, 0.1)',
-            label: {
-                text: '柔和风',
-                style: {
-                    color: '#606060'
-                }
-            }
-        }, { // Moderate breeze
-            from: 5.5,
-            to: 8,
-            color: 'rgba(0, 0, 0, 0)',
-            label: {
-                text: '温和风',
-                style: {
-                    color: '#606060'
-                }
-            }
-        }, { // Fresh breeze
-            from: 8,
-            to: 11,
-            color: 'rgba(68, 170, 213, 0.1)',
-            label: {
-                text: '清新风',
-                style: {
-                    color: '#606060'
-                }
-            }
-        }, { // Strong breeze
-            from: 11,
-            to: 14,
-            color: 'rgba(0, 0, 0, 0)',
-            label: {
-                text: '强风',
-                style: {
-                    color: '#606060'
-                }
-            }
-        }, { // High wind
-            from: 14,
-            to: 15,
-            color: 'rgba(68, 170, 213, 0.1)',
-            label: {
-                text: '狂风',
-                style: {
-                    color: '#606060'
-                }
-            }
-        }]
-    },
-    tooltip: {
-        valueSuffix: ' m/s'
-    },
-    plotOptions: {
-        spline: {
-            lineWidth: 4,
-            states: {
-                hover: {
-                    lineWidth: 5
-                }
-            },
-            marker: {
-                enabled: false
-            },
-            pointInterval: 3600000, // one hour
-            pointStart: Date.UTC(2009, 9, 6, 0, 0, 0)
-        }
-    },
-    series: [{
-        name: 'Hestavollane',
-        data: [4.3, 5.1, 4.3, 5.2, 5.4, 4.7, 3.5, 4.1, 5.6, 7.4, 6.9, 7.1,
-               7.9, 7.9, 7.5, 6.7, 7.7, 7.7, 7.4, 7.0, 7.1, 5.8, 5.9, 7.4,
-               8.2, 8.5, 9.4, 8.1, 10.9, 10.4, 10.9, 12.4, 12.1, 9.5, 7.5,
-               7.1, 7.5, 8.1, 6.8, 3.4, 2.1, 1.9, 2.8, 2.9, 1.3, 4.4, 4.2,
-               3.0, 3.0]
-    }, {
-        name: 'Voll',
-        data: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.1, 0.0, 0.3, 0.0,
-               0.0, 0.4, 0.0, 0.1, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
-               0.0, 0.6, 1.2, 1.7, 0.7, 2.9, 4.1, 2.6, 3.7, 3.9, 1.7, 2.3,
-               3.0, 3.3, 4.8, 5.0, 4.8, 5.0, 3.2, 2.0, 0.9, 0.4, 0.3, 0.5, 0.4]
-    }],
-    navigation: {
-        menuItemStyle: {
-            fontSize: '10px'
-        }
-    }
+var seriesOptions = [],
+		seriesCounter = 0,
+		names = ['MSFT', 'AAPL', 'GOOG'];
+/**
+     * Create the chart when all data is loaded
+     * @returns {undefined}
+     */
+function createChart() {
+		Highcharts.stockChart('group_cpu', {
+				chart: {
+						zoomType: null,
+						// pinchType: null
+				},
+				rangeSelector: {
+						selected: 4
+				},
+				yAxis: {
+						labels: {
+								formatter: function () {
+										return (this.value > 0 ? ' + ' : '') + this.value + '%';
+								}
+						},
+						plotLines: [{
+								value: 0,
+								width: 2,
+								color: 'silver'
+						}]
+				},
+				plotOptions: {
+						series: {
+								compare: 'percent',
+								showInNavigator: true
+						}
+				},
+				tooltip: {
+						pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y}</b> ({point.change}%)<br/>',
+						valueDecimals: 2,
+						followTouchMove: false,
+						split: true
+				},
+				series: seriesOptions
+		});
+}
+$.each(names, function (i, name) {
+		$.getJSON('https://data.jianshukeji.com/jsonp?filename=json/' + name.toLowerCase() + '-c.json&callback=?',    function (data) {
+				seriesOptions[i] = {
+						name: name,
+						data: data
+				};
+				// As we're loading the data asynchronously, we don't know what order it will arrive. So
+				// we keep a counter and create the chart when all the data is loaded.
+				seriesCounter += 1;
+				if (seriesCounter === names.length) {
+						createChart();
+				}
+		});
 });
 
 
-var chart = Highcharts.chart('line22', {
-		chart: {
-				type: 'pie',
-				options3d: {
-						enabled: true,
-						alpha: 45
-				}
-		},
-		title: {
-				text: '简数科技每周水果消耗量'
-		},
-		subtitle: {
-				text: 'Highcharts 中的3D环形图'
-		},
-		plotOptions: {
-				pie: {
-						innerSize: 100,
-						depth: 45
-				}
-		},
-		series: [{
-				name: '货物金额',
-				data: [
-						['香蕉', 8],
-						['猕猴桃', 3],
-						['桃子', 1],
-						['橘子', 6],
-						['苹果', 8],
-						['梨', 4],
-						['柑橘', 4],
-						['橙子', 1],
-						['葡萄 (串)', 1]
-				]
-		}]
-});
-    </script>
+function CPUtimeDown(limit) {
+   if (limit == 60) {
+   get_cpu();
+   }
+   limit--;
+
+   if (limit < 0) {
+       limit = 60;
+   }
+
+   setTimeout(function() {
+       CPUtimeDown(limit);
+   }, 1000)
+}
+
+
+function MemorytimeDown(limit) {
+   if (limit == 60) {
+   get_memory();
+   }
+   limit--;
+
+   if (limit < 0) {
+       limit = 60;
+   }
+
+   setTimeout(function() {
+       MemorytimeDown(limit);
+   }, 1000)
+}
+
+function groupCputimeDown(limit) {
+   if (limit == 60) {
+   get_group_cpu();
+   }
+   limit--;
+
+   if (limit < 0) {
+       limit = 60;
+   }
+
+   setTimeout(function() {
+       groupCputimeDown(limit);
+   }, 1000)
+}
+
+$(document).ready(function() {
+   CPUtimeDown(60);
+   MemorytimeDown(60);
+})
+</script>
+
 {% endblock %}
