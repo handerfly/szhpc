@@ -34,11 +34,11 @@
 
  <div class="row">
   <div class="col-md-6">
-    <h1>CPU使用率</h1>
+    <h1>集群总体CPU使用率</h1>
       <div id="CPU" ></div>
   </div>
   <div class="col-md-6">
-      <h1>内存使用率</h1>
+      <h1>集群总体内存使用率</h1>
       <div id="Memory"></div>
   </div>
 </div>
@@ -75,7 +75,8 @@
 
 {% block script_extends %}
 
-<script src="http://cdn.highcharts.com.cn/highcharts/highcharts.js"></script>
+
+<script src="http://cdn.highcharts.com.cn/highstock/highstock.js"></script>
 <script type="text/javascript">
      Highcharts.setOptions({ global: { useUTC: false } });
 </script>
@@ -83,102 +84,15 @@
 <script src="{% static 'ajax/cpu.js'%}"></script>
 <script src="{% static 'ajax/memory.js'%}"></script>
 <script src="{% static 'ajax/group_cpu.js'%}"></script>
-<!--<script src="{% static 'ajax/group_memory.js'%}"></script>-->
+<script src="{% static 'ajax/group_memory.js'%}"></script>
 
 <script>
 
-var seriesOptions = [],
-		seriesCounter = 0,
-		names = ['MSFT', 'AAPL', 'GOOG'];
-/**
-     * Create the chart when all data is loaded
-     * @returns {undefined}
-     */
-function createChart() {
-		Highcharts.stockChart('group_cpu', {
-				chart: {
-						zoomType: null,
-						// pinchType: null
-				},
-				rangeSelector: {
-						selected: 4
-				},
-				yAxis: {
-						labels: {
-								formatter: function () {
-										return (this.value > 0 ? ' + ' : '') + this.value + '%';
-								}
-						},
-						plotLines: [{
-								value: 0,
-								width: 2,
-								color: 'silver'
-						}]
-				},
-				plotOptions: {
-						series: {
-								compare: 'percent',
-								showInNavigator: true
-						}
-				},
-				tooltip: {
-						pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y}</b> ({point.change}%)<br/>',
-						valueDecimals: 2,
-						followTouchMove: false,
-						split: true
-				},
-				series: seriesOptions
-		});
-}
-$.each(names, function (i, name) {
-		$.getJSON('https://data.jianshukeji.com/jsonp?filename=json/' + name.toLowerCase() + '-c.json&callback=?',    function (data) {
-				seriesOptions[i] = {
-						name: name,
-						data: data
-				};
-				// As we're loading the data asynchronously, we don't know what order it will arrive. So
-				// we keep a counter and create the chart when all the data is loaded.
-				seriesCounter += 1;
-				if (seriesCounter === names.length) {
-						createChart();
-				}
-		});
-});
-
-
-function CPUtimeDown(limit) {
+function timeDown(limit) {
    if (limit == 60) {
    get_cpu();
-   }
-   limit--;
-
-   if (limit < 0) {
-       limit = 60;
-   }
-
-   setTimeout(function() {
-       CPUtimeDown(limit);
-   }, 1000)
-}
-
-
-function MemorytimeDown(limit) {
-   if (limit == 60) {
    get_memory();
-   }
-   limit--;
-
-   if (limit < 0) {
-       limit = 60;
-   }
-
-   setTimeout(function() {
-       MemorytimeDown(limit);
-   }, 1000)
-}
-
-function groupCputimeDown(limit) {
-   if (limit == 60) {
+   get_group_memory();
    get_group_cpu();
    }
    limit--;
@@ -188,14 +102,17 @@ function groupCputimeDown(limit) {
    }
 
    setTimeout(function() {
-       groupCputimeDown(limit);
+       timeDown(limit);
    }, 1000)
 }
 
+
+
 $(document).ready(function() {
-   CPUtimeDown(60);
-   MemorytimeDown(60);
-})
+   timeDown(60);
+
+
+    })
 </script>
 
 {% endblock %}

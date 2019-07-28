@@ -54,12 +54,58 @@ def memory_chart(request):
     return JsonResponse(name_dict)
 
 
-def group_cpu_chart(request):
-    pass
-
-
 def group_memory_chart(request):
-    pass
+    with connections['db_gridview'].cursor() as cursor:
+        sql_str = "SELECT rs.NAME FROM gv_rm_resource as rs,gv_rm_category as ct WHERE rs.CATEGORY_ID=ct.ID AND ct.DESCRIPTION='组' order by rs.NAME asc"
+        cursor.execute(sql_str)
+        row = cursor.fetchall()
+
+
+
+    all_dic_list = []
+    for each_group in row:
+        # 查询每一组的内存使用率
+        group_sub_data_list = []
+        with connections['db_gridview'].cursor() as cursor:
+            single_group_sql_str = "SELECT UNIX_TIMESTAMP(mtc_data.COLLECT_TIME), mtc_data.VALUE FROM gv_rm_category AS ct , gv_rm_resource AS rs, gv_collect_metric AS mtc, gv_collect_metric_data_history AS mtc_data,gv_collect_metric_templ AS mtc_tp WHERE rs.CATEGORY_ID=ct.ID AND mtc.RESOURCE_ID=rs.ID AND mtc.ID=mtc_data.METRIC_ID AND mtc_tp.ID=mtc.METRIC_TEMPL_ID  AND mtc.NAME=%s AND rs.NAME=%s"
+            cursor.execute(single_group_sql_str, ["Memory Usage",each_group[0]])
+            single_group_row = cursor.fetchall()
+            for each_group_memory_value in single_group_row:
+                group_sub_data_list.append([each_group_memory_value[0]*1000,float(each_group_memory_value[1])])
+        all_dic_list.append({"name":each_group[0],"data":group_sub_data_list})
+        all_dic_list.append(",")
+
+
+    group_memory_dict_list = {'status': 'success', 'json_group_memory_data': all_dic_list}
+    return JsonResponse(group_memory_dict_list)
+    # return  HttpResponse(all_dic_list)
+
+
+def group_cpu_chart(request):
+    with connections['db_gridview'].cursor() as cursor:
+        sql_str = "SELECT rs.NAME FROM gv_rm_resource as rs,gv_rm_category as ct WHERE rs.CATEGORY_ID=ct.ID AND ct.DESCRIPTION='组'"
+        cursor.execute(sql_str)
+        row = cursor.fetchall()
+
+
+
+    all_dic_list = []
+    for each_group in row:
+        # 查询每一组的内存使用率
+        group_sub_data_list = []
+        with connections['db_gridview'].cursor() as cursor:
+            single_group_sql_str = "SELECT UNIX_TIMESTAMP(mtc_data.COLLECT_TIME), mtc_data.VALUE FROM gv_rm_category AS ct , gv_rm_resource AS rs, gv_collect_metric AS mtc, gv_collect_metric_data_history AS mtc_data,gv_collect_metric_templ AS mtc_tp WHERE rs.CATEGORY_ID=ct.ID AND mtc.RESOURCE_ID=rs.ID AND mtc.ID=mtc_data.METRIC_ID AND mtc_tp.ID=mtc.METRIC_TEMPL_ID  AND mtc.NAME=%s AND rs.NAME=%s"
+            cursor.execute(single_group_sql_str, ["CPU Usage",each_group[0]])
+            single_group_row = cursor.fetchall()
+            for each_group_cpu_value in single_group_row:
+                group_sub_data_list.append([each_group_cpu_value[0]*1000,float(each_group_cpu_value[1])])
+        all_dic_list.append({"name":each_group[0],"data":group_sub_data_list})
+        all_dic_list.append(",")
+
+
+    group_cpu_dict_list = {'status': 'success', 'json_group_cpu_data': all_dic_list}
+    return JsonResponse(group_cpu_dict_list)
+
 
 
 
