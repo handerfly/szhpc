@@ -56,7 +56,7 @@ def memory_chart(request):
 
 def group_memory_chart(request):
     with connections['db_gridview'].cursor() as cursor:
-        sql_str = "SELECT rs.NAME FROM gv_rm_resource as rs,gv_rm_category as ct WHERE rs.CATEGORY_ID=ct.ID AND ct.DESCRIPTION='组' order by rs.NAME asc"
+        sql_str = "SELECT rs.NAME FROM gv_rm_resource as rs,gv_rm_category as ct WHERE rs.CATEGORY_ID=ct.ID AND ct.DESCRIPTION='组'"
         cursor.execute(sql_str)
         row = cursor.fetchall()
 

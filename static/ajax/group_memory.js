@@ -20,7 +20,7 @@
                                     },
                                     yAxis: {
                                             labels: {
-                                                    
+
                                             },
                                             plotLines: [{
                                                     value: 0,
