@@ -2,6 +2,8 @@ from django.shortcuts import render
 from django.http import  JsonResponse
 from django.db import connections
 from django.http import HttpResponse
+from .models import Quota,Quota_user
+import json
 import time
 # Create your views here.
 
@@ -31,6 +33,7 @@ def cpu_chart(request):
 
     name_dict = {'status': 'success', 'json_cpu_data':json_cpu_data}
     return JsonResponse(name_dict)
+    # return  HttpResponse(json_cpu_data)
 
 def memory_chart(request):
     # 获取集群总体CPU使用率
@@ -73,7 +76,6 @@ def group_memory_chart(request):
             for each_group_memory_value in single_group_row:
                 group_sub_data_list.append([each_group_memory_value[0]*1000,float(each_group_memory_value[1])])
         all_dic_list.append({"name":each_group[0],"data":group_sub_data_list})
-        all_dic_list.append(",")
 
 
     group_memory_dict_list = {'status': 'success', 'json_group_memory_data': all_dic_list}
@@ -100,7 +102,7 @@ def group_cpu_chart(request):
             for each_group_cpu_value in single_group_row:
                 group_sub_data_list.append([each_group_cpu_value[0]*1000,float(each_group_cpu_value[1])])
         all_dic_list.append({"name":each_group[0],"data":group_sub_data_list})
-        all_dic_list.append(",")
+        # all_dic_list.append(",")
 
 
     group_cpu_dict_list = {'status': 'success', 'json_group_cpu_data': all_dic_list}
@@ -109,12 +111,50 @@ def group_cpu_chart(request):
 
 
 
-# def my_sql(self):
-#     with connections['db_gridview'].cursor() as cursor:
-#         # cursor.execute("UPDATE bar SET foo = 1 WHERE baz = %s", [self.baz])
-#         cursor.execute("SELECT * FROM gv_rm_category")
-#         row = cursor.fetchone()
-#
-#
-#     return HttpResponse(row)
+def get_selected_option(request):
+    # 查询所有的用户名，其中第一条查询历史记录
+    first_user = Quota_user.objects.first()
 
+    # 获取第一个用户的数据
+    filter_time = str(int(time.time()) - 2592000) + "000"
+    first_user_data = Quota.objects.values('id','username','realbytes','softbytes','hardbytes','collect_time').filter(
+        username=first_user.username,collect_time__gt=filter_time)
+    first_user_data_set = []
+    for first_user_dic in first_user_data:
+        first_user_data_set.append([int(first_user_dic['collect_time']),round(int(first_user_dic['realbytes'])/1024/1024/1024/1024,2)])
+
+    #return HttpResponse(first_user_data_set)
+    #所有用户列表
+    all_users = Quota_user.objects.values('username','softbytes','hardbytes').all()
+    list_user = []
+    for each_user in all_users:
+        list_user.append({"username" : each_user['username'],
+                          "softbytes": each_user['softbytes'],
+                          "hardbytes": each_user['hardbytes'],
+                          "back_data": first_user_data_set
+                          })
+    list_user = json.dumps(list_user, indent=2)
+    return HttpResponse(list_user)
+
+
+
+
+def storage_chart(request):
+    user = request.POST.get('username')
+
+    # 根据用户名查询阈值
+    user_obj = Quota_user.objects.get(username=user)
+
+    soft_threshold = user_obj.softbytes
+    hard_threshold = user_obj.hardbytes
+
+    filter_time = str(int(time.time())-2592000)+"000"
+    user_data = Quota.objects.values('id', 'username', 'realbytes', 'softbytes', 'hardbytes',
+                                           'collect_time').filter(username=user,collect_time__gt=filter_time)
+    user_data_set = []
+    for user_dic in user_data:
+        user_data_set.append([int(user_dic['collect_time']),
+                                    round(int(user_dic['realbytes']) / 1024 / 1024 / 1024 / 1024, 2)])
+
+    # data = [[1564729202000, 78.41],[1564729265000, 74.89],[1564729324000, 75.5],[1564729385000, 75.34],[1564729445000, 74.23],[1564729501000, 74.36],[1564729564000, 74.54],[1564729624000, 74.17],[1564729684000, 74.86],[1564729745000, 74.85],[1564729801000, 73.69],[1564729865000, 72.82],[1564729925000, 71.59],[1564729985000, 70.74],[1564730045000, 60.75],[1564730101000, 54.84],[1564730165000, 53.66],[1564730225000, 53.13],[1564730285000, 52.57],[1564730345000, 53.63],[1564730401000, 54.35],[1564730465000, 54.49],[1564730525000, 55.98],[1564730584000, 60.79],[1564730644000, 58.87],[1564730701000, 58.8],[1564730765000, 54.28],[1564730825000, 58.95],[1564730885000, 61.14],[1564730945000, 71.09],[1564731001000, 75.41],[1564731065000, 75.76],[1564731125000, 71.26],[1564731185000, 67.51],[1564731245000, 75.07],[1564731301000, 76.05],[1564731365000, 76.0],[1564731425000, 75.61],[1564731484000, 76.56],[1564731545000, 75.01],[1564731601000, 73.96],[1564731664000, 74.59],[1564731724000, 73.55],[1564731785000, 72.76],[1564731845000, 72.39],[1564731901000, 71.76],[1564731965000, 69.96],[1564732024000, 70.15],[1564732085000, 69.63],[1564732145000, 68.12],[1564732201000, 69.32],[1564732265000, 68.59],[1564732325000, 65.9],[1564732385000, 67.31],[1564732445000, 65.95],[1564732501000, 64.26],[1564732565000, 62.55],[1564732625000, 62.35],[1564732685000, 60.96],[1564732745000, 59.72],[1564732801000, 58.94],[1564732865000, 59.48],[1564732925000, 54.53]]
+    return JsonResponse({"status":"success","back_data":user_data_set,"soft_threshold":soft_threshold,"hard_threshold":hard_threshold})

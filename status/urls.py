@@ -26,4 +26,7 @@ urlpatterns = [
     path("group_cpu_chart", views.group_cpu_chart, name="group_cpu_chart"),
     path("group_memory_chart", views.group_memory_chart, name="group_memory_chart"),
 
+    path("get_selected_option", views.get_selected_option, name="get_selected_option"),
+    path("storage_chart", views.storage_chart, name="storage_chart"),
+
 ]

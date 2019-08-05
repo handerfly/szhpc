@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="22501eca-6ce5-4096-ab77-7cdfa72b9439" name="Default Changelist" comment="" />
+    <list default="true" id="22501eca-6ce5-4096-ab77-7cdfa72b9439" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ajax/cpu - 副本 (3).js" beforeDir="false" afterPath="$PROJECT_DIR$/static/ajax/strorage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ajax/cpu.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/ajax/cpu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ajax/group_cpu.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/ajax/group_cpu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ajax/group_memory.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/ajax/group_memory.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/status/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/status/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/status/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/status/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/status/templates/status/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/status/templates/status/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/status/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/status/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/status/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/status/views.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,8 +24,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/status/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="576">
-              <caret line="26" column="55" selection-start-line="26" selection-start-column="37" selection-end-line="26" selection-end-column="55" />
+            <state relative-caret-position="361">
+              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
               <folding>
                 <element signature="e#631#663#0" expanded="true" />
               </folding>
@@ -25,8 +36,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/szhpc/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1272">
-              <caret line="53" column="5" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
+            <state relative-caret-position="361">
+              <caret line="91" column="10" lean-forward="true" selection-start-line="91" selection-start-column="10" selection-end-line="91" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -34,8 +45,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/status/templates/status/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="90" column="9" selection-start-line="90" selection-start-column="9" selection-end-line="90" selection-end-column="9" />
+            <state relative-caret-position="947">
+              <caret line="100" selection-start-line="100" selection-end-line="100" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#img#0;n#section#0;n#section#0;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -45,19 +56,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/ajax/group_memory.js">
+        <entry file="file://$PROJECT_DIR$/static/ajax/cpu.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
-              <caret line="22" selection-start-line="22" selection-end-line="22" />
+            <state relative-caret-position="336">
+              <caret line="68" column="45" selection-start-line="68" selection-start-column="45" selection-end-line="68" selection-end-column="45" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/ajax/group_cpu.js">
+        <entry file="file://$PROJECT_DIR$/static/ajax/strorage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1272">
-              <caret line="53" column="45" selection-start-line="53" selection-start-column="45" selection-end-line="53" selection-end-column="45" />
+            <state relative-caret-position="504">
+              <caret line="114" column="40" selection-start-line="114" selection-start-column="40" selection-end-line="114" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -65,11 +76,20 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/status/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="888">
-              <caret line="58" column="149" selection-start-line="58" selection-start-column="149" selection-end-line="58" selection-end-column="149" />
+            <state relative-caret-position="322">
+              <caret line="150" column="110" selection-start-line="150" selection-start-column="97" selection-end-line="150" selection-end-column="110" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/status/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="577">
+              <caret line="38" column="26" selection-start-line="38" selection-start-column="26" selection-end-line="38" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -92,6 +112,8 @@
       <find>get</find>
       <find>tp</find>
       <find>seriesCounter</find>
+      <find>value</find>
+      <find>data</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -100,7 +122,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/guide/admin.py" />
         <option value="$PROJECT_DIR$/resource/admin.py" />
         <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/hpc/url.py" />
@@ -139,26 +160,27 @@
         <option value="$PROJECT_DIR$/resource/models.py" />
         <option value="$PROJECT_DIR$/hpc/models.py" />
         <option value="$PROJECT_DIR$/guide/models.py" />
-        <option value="$PROJECT_DIR$/status/admin.py" />
         <option value="$PROJECT_DIR$/contact/admin.py" />
-        <option value="$PROJECT_DIR$/status/models.py" />
         <option value="$PROJECT_DIR$/static/ajax/comm.js" />
         <option value="$PROJECT_DIR$/szhpc/settings.py" />
-        <option value="$PROJECT_DIR$/static/ajax/cpu.js" />
         <option value="$PROJECT_DIR$/static/ajax/memory.js" />
-        <option value="$PROJECT_DIR$/status/urls.py" />
-        <option value="$PROJECT_DIR$/static/ajax/group_cpu.js" />
-        <option value="$PROJECT_DIR$/status/views.py" />
-        <option value="$PROJECT_DIR$/status/templates/status/index.html" />
         <option value="$PROJECT_DIR$/static/ajax/group_memory.js" />
+        <option value="$PROJECT_DIR$/status/urls.py" />
+        <option value="$PROJECT_DIR$/status/templates/status/index.html" />
+        <option value="$PROJECT_DIR$/static/ajax/group_cpu.js" />
+        <option value="$PROJECT_DIR$/status/admin.py" />
+        <option value="$PROJECT_DIR$/status/models.py" />
+        <option value="$PROJECT_DIR$/static/ajax/cpu.js" />
+        <option value="$PROJECT_DIR$/static/ajax/strorage.js" />
+        <option value="$PROJECT_DIR$/status/views.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="145" />
-    <option name="y" value="31" />
-    <option name="width" value="1884" />
-    <option name="height" value="908" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="15" />
+    <option name="y" value="107" />
+    <option name="width" value="1934" />
+    <option name="height" value="835" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -183,6 +205,29 @@
               <item name="szhpc" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
               <item name="ajax" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="szhpc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="szhpc" type="462c0819:PsiDirectoryNode" />
+              <item name="status" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="szhpc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="szhpc" type="462c0819:PsiDirectoryNode" />
+              <item name="status" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="szhpc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="szhpc" type="462c0819:PsiDirectoryNode" />
+              <item name="status" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="status" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="szhpc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="szhpc" type="462c0819:PsiDirectoryNode" />
+              <item name="szhpc" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="szhpc" type="b2602c69:ProjectViewProjectNode" />
@@ -268,10 +313,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="340" y="145" width="1934" height="835" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.11064278" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.11023207" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -310,13 +355,6 @@
     </layout-to-restore>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/download/apps.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hpc/templates/hpc/news.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -600,23 +638,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/status/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/status/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="16" column="39" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/contact/admin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
@@ -663,24 +684,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/ajax/cpu.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2136">
-          <caret line="89" column="39" selection-start-line="89" selection-start-column="39" selection-end-line="89" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/szhpc/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1272">
-          <caret line="53" column="5" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/status/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="26" column="55" selection-start-line="26" selection-start-column="37" selection-end-line="26" selection-end-column="55" />
+        <state relative-caret-position="361">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
           <folding>
             <element signature="e#631#663#0" expanded="true" />
           </folding>
@@ -689,15 +696,46 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/static/ajax/group_cpu.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1272">
-          <caret line="53" column="45" selection-start-line="53" selection-start-column="45" selection-end-line="53" selection-end-column="45" />
+        <state relative-caret-position="-1539">
+          <caret line="14" column="42" selection-start-line="14" selection-start-column="42" selection-end-line="14" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/ajax/group_memory.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1135">
+          <caret line="51" column="53" selection-start-line="51" selection-start-column="53" selection-end-line="51" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/szhpc/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="91" column="10" lean-forward="true" selection-start-line="91" selection-start-column="10" selection-end-line="91" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/status/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/ajax/cpu.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="68" column="45" selection-start-line="68" selection-start-column="45" selection-end-line="68" selection-end-column="45" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/status/templates/status/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="90" column="9" selection-start-line="90" selection-start-column="9" selection-end-line="90" selection-end-column="9" />
+        <state relative-caret-position="947">
+          <caret line="100" selection-start-line="100" selection-end-line="100" />
           <folding>
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#section#0;n#section#0;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -705,17 +743,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/ajax/group_memory.js">
+    <entry file="file://$PROJECT_DIR$/status/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        <state relative-caret-position="577">
+          <caret line="38" column="26" selection-start-line="38" selection-start-column="26" selection-end-line="38" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/ajax/strorage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="114" column="40" selection-start-line="114" selection-start-column="40" selection-end-line="114" selection-end-column="40" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/status/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="888">
-          <caret line="58" column="149" selection-start-line="58" selection-start-column="149" selection-end-line="58" selection-end-column="149" />
+        <state relative-caret-position="322">
+          <caret line="150" column="110" selection-start-line="150" selection-start-column="97" selection-end-line="150" selection-end-column="110" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>
