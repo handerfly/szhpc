@@ -19,7 +19,7 @@
                             zoomType: 'x'
                         },
                         title: {
-                            text: ''
+                            text: 'CPU使用率'
                         },
                         subtitle: {
                             text: document.ontouchstart === undefined ?

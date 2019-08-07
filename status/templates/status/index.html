@@ -3,11 +3,14 @@
 {% block content %}
 {% block head_extends %}
 <style>
-    .table-hover > tbody > tr:hover > td,
+.table-hover > tbody > tr > td,
+.table-hover > tbody > tr > th {
+	color:#768d99;
+}
+.table-hover > tbody > tr:hover > td,
 .table-hover > tbody > tr:hover > th {
-	color:blue;
-	 background-color: #66CDAA;
-	cursor: pointer;
+
+	 background-color: #e8f5ff;
 }
 </style>
 <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css"

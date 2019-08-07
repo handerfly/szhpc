@@ -14,3 +14,7 @@ class QuotaAdmin(admin.ModelAdmin):
     "hardinodes",
     "grace",
     "collect_time"]
+
+
+admin.site.site_header = '深圳气象局高性能网后台管理'
+admin.site.site_title = '深圳气象局高性能'

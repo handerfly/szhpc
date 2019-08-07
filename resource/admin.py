@@ -10,5 +10,3 @@ class ResourceAdmin(admin.ModelAdmin):
     list_display = ['id', 'content']
 
 #
-admin.site.site_header = '深圳气象局高性能网后台管理'
-admin.site.site_title = '深圳气象局高性能'

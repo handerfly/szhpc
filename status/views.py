@@ -14,6 +14,7 @@ def index(request):
     context['title'] = "运行状态"
     return render(request, 'status/index.html', context)
 
+# 实时CPU利用率
 def cpu_chart(request):
     # 获取集群总体CPU使用率
     sql_str = "SELECT mtc_data.VALUE,unix_timestamp(mtc_data.COLLECT_TIME) FROM gv_collect_metric as mtc,gv_collect_metric_data_history as mtc_data, gv_collect_metric_templ as mtc_tp WHERE mtc.RESOURCE_ID=1001 AND mtc.ID=mtc_data.METRIC_ID AND mtc.METRIC_TEMPL_ID=mtc_tp.ID AND mtc_tp.DESCRIPTION='CPU利用率' "
@@ -36,6 +37,17 @@ def cpu_chart(request):
     name_dict = {'status': 'success', 'json_cpu_data':json_cpu_data}
     return JsonResponse(name_dict)
     # return  HttpResponse(json_cpu_data)
+
+# 历史CPU利用率
+def cpu_history(request):
+    select_sql = '''SELECT  mtc_data.AVERAGE, unix_timestamp(mtc_data.COLLECT_TIME) FROM gv_collect_metric as mtc, gv_collect_metric_data_1h as mtc_data, gv_collect_metric_templ as mtc_tp
+    WHERE  mtc.RESOURCE_ID = 1001 AND mtc.ID = mtc_data.METRIC_ID AND  mtc.METRIC_TEMPL_ID = mtc_tp.ID  AND  mtc_tp.DESCRIPTION = "CPU利用率"
+    AND DATE_FORMAT(mtc_data.COLLECT_TIME, '%Y-%d-%m') = DATE_FORMAT(DATE_SUB(NOW(), INTERVAL 1 DAY), '%Y-%d-%m')'''
+    with connections['db_gridview'].cursor() as cursor:
+        cursor.execute(select_sql)
+        row = cursor.fetchall()
+    return  HttpResponse(row)
+
 
 def memory_chart(request):
     # 获取集群总体CPU使用率
