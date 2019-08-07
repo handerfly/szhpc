@@ -55,25 +55,7 @@
                             title: {
                                 text: '集群总体CPU使用率 %'
                             },
-                            //1
-                           plotLines: [{
-								value: 30,
-								color: 'red',
-								dashStyle: 'shortdash',
-								width: 2,
-								label: {
-										text: 'Last quarter minimum'
-								}
-						}, {
-								value: 79,
-								color: 'green',
-								dashStyle: 'shortdash',
-								width: 2,
-								label: {
-										text: 'Last quarter maximum'
-								}
-						}]
-                            //end1
+
                         },
                         legend: {
                             enabled: false

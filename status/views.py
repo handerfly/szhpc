@@ -3,8 +3,10 @@ from django.http import  JsonResponse
 from django.db import connections
 from django.http import HttpResponse
 from .models import Quota,Quota_user
+from django.core import serializers
 import json
 import time
+
 # Create your views here.
 
 def index(request):
@@ -136,9 +138,20 @@ def get_selected_option(request):
     list_user = json.dumps(list_user, indent=2)
     return HttpResponse(list_user)
 
+# 存储实时表格数据
+def storage_table(request):
+    data = {}
+    user_objs = Quota_user.objects.values('username','uid','realbytes','softbytes','hardbytes','realinodes','softinodes','hardinodes','grace')
+
+    data['list'] = list(user_objs)
+    return JsonResponse(data)
+    #data = serializers.serialize("json", user_objs)
+    #return HttpResponse(data)
 
 
 
+
+# 存储历史趋势图表
 def storage_chart(request):
     user = request.POST.get('username')
 

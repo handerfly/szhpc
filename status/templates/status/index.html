@@ -2,84 +2,122 @@
 {% load staticfiles %}
 {% block content %}
 {% block head_extends %}
-<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<style>
+    .table-hover > tbody > tr:hover > td,
+.table-hover > tbody > tr:hover > th {
+	color:blue;
+	 background-color: #66CDAA;
+	cursor: pointer;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 {% endblock %}
 
 <div class="main-body" style="min-hight:1600px">
-  <div class="content">
-      <section class="sub-header" style="display:none;">
-  			<section class="mobSecNav">
+    <div class="content">
+        <section class="sub-header" style="display:none;">
+            <section class="mobSecNav">
                 <img id="subNavlogo" src="{% static 'img/mnav2.png'%}" style="padding-bottom:6px;"></section>
-  			<section class="mobSecNavMenu">
-  				<ul>
-  					<li><a href="news.html">最新动态</a></li>
-  				</ul>
-  			</section>
-        <section class="secNav">
-  				<ul>
-  					<li  class="cur"><a href="news.html">最新动态</a></li>
-  				</ul>
-  			</section>
-  		</section>
+            <section class="mobSecNavMenu">
+                <ul>
+                    <li><a href="news.html">最新动态</a></li>
+                </ul>
+            </section>
+            <section class="secNav">
+                <ul>
+                    <li class="cur"><a href="news.html">最新动态</a></li>
+                </ul>
+            </section>
+        </section>
 
 
-<div class="col_lg_12">
-    <div class="mainContent">
-        <div class="introTit clearfix">
-            <h2>运行状态</h2>
+        <div class="col_lg_12">
+            <div class="mainContent">
+                <div class="introTit clearfix">
+                    <h2>运行状态</h2>
+                </div>
+            </div>
         </div>
 
+        <div class="row">
+            <div class="col-md-12">
+                <h3>集群总体CPU使用率</h3>
+                <div id="CPU"></div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h3>集群总体内存使用率</h3>
+                <div id="Memory"></div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h3>分组CPU使用率</h3>
+                <div id="group_cpu"></div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h3>分组内存使用率</h3>
+                <div id="group_memory"></div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h3>存储使用率</h3>
+                <div id="storage1">
+                    <table class="table table-sm table-striped table-bordered table-hover">
+                        <thead class="">
+                        <tr>
+                            <th scope="col">用户名</th>
+                            <th scope="col">用户ID</th>
+                            <th scope="col">已用容量</th>
+                            <th scope="col">可用容量</th>
+                            <th scope="col">空间使用率(%)</th>
+                            <th scope="col">已用目录及文件总数</th>
+                            <th scope="col">容量软阈值</th>
+                            <th scope="col">容量硬阈值</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h3>存储使用率</h3>
+                <select name="main_id" id="main_id" class="text input-large form-control"></select>
+                <div id="storage"></div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h3>运行队列</h3>
+                <div id="line22">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="clearfix"></div>
     </div>
- </div>
-
- <div class="row">
-  <div class="col-md-6">
-    <h1>集群总体CPU使用率</h1>
-      <div id="CPU" ></div>
-  </div>
-  <div class="col-md-6">
-      <h1>集群总体内存使用率</h1>
-      <div id="Memory"></div>
-  </div>
-</div>
-
-      <hr>
-<div class="row">
-  <div class="col-md-6">
-    <h1>分组CPU使用率</h1>
-      <div id="group_cpu" ></div>
-  </div>
-  <div class="col-md-6">
-      <h1>分组内存使用率</h1>
-      <div id="group_memory"></div>
-  </div>
-</div>
-
-      <hr>
-<div class="row">
-  <div class="col-md-12">
-    <h1>存储使用率</h1>
-      <div id="storage1" ></div>
-  </div>
-
-</div>
-
-            <hr>
-<div class="row">
-  <div class="col-md-6">
-    <h1>存储使用率</h1>
-      <select name="main_id" id="main_id" class="text input-large form-control" ></select>
-      <div id="storage" ></div>
-  </div>
-  <div class="col-md-6">
-      <h1>运行队列</h1>
-      <div id="line22">
-
-      </div>
-  </div>
-</div>
-    <div class="clearfix"></div>
-  </div>
 </div>
 
 {% endblock %}
@@ -90,13 +128,15 @@
 <script src="http://cdn.highcharts.com.cn/highstock/highstock.js"></script>
 <script type="text/javascript">
      Highcharts.setOptions({ global: { useUTC: false } });
+
 </script>
 
 <script src="{% static 'ajax/cpu.js'%}"></script>
 <script src="{% static 'ajax/memory.js'%}"></script>
 <script src="{% static 'ajax/group_cpu.js'%}"></script>
 <script src="{% static 'ajax/group_memory.js'%}"></script>
-<script src="{% static 'ajax/strorage.js'%}"></script>
+<script src="{% static 'ajax/storage.js'%}"></script>
+<script src="{% static 'ajax/storage_table.js'%}"></script>
 <script>
 
 
@@ -110,6 +150,7 @@ function timeDown(limit) {
    get_memory();
    get_group_memory();
    get_group_cpu();
+   get_storage_table()
    }
    limit--;
 
@@ -129,5 +170,9 @@ $(document).ready(function() {
 
 
     })
+
+
+
+
 </script>
 {% endblock %}

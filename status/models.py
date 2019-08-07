@@ -26,9 +26,15 @@ class Quota(models.Model):
 
 
 class Quota_user(models.Model):
-    username = models.CharField(verbose_name="用户名",max_length=50)
-    softbytes = models.CharField(verbose_name="软阈值",max_length=50)
-    hardbytes = models.CharField(verbose_name="硬阈值",max_length=50)
+    username = models.CharField(verbose_name="用户名", max_length=50,default='')
+    uid = models.CharField(verbose_name="用户ID", max_length=50,default='')
+    realbytes = models.CharField(verbose_name="已用容量", max_length=50,default='')
+    softbytes = models.CharField(verbose_name="软阈值", max_length=50,default='')
+    hardbytes = models.CharField(verbose_name="硬阈值", max_length=50,default='')
+    realinodes = models.CharField(verbose_name="已用文件数", max_length=50,default='')
+    softinodes = models.CharField(verbose_name="文件数软阈值", max_length=50,default='')
+    hardinodes = models.CharField(verbose_name="文件数硬阈值", max_length=50,default='')
+    grace = models.CharField(verbose_name="天数", max_length=50,default='')
 
 
     def __str__(self):

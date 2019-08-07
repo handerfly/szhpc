@@ -28,5 +28,5 @@ urlpatterns = [
 
     path("get_selected_option", views.get_selected_option, name="get_selected_option"),
     path("storage_chart", views.storage_chart, name="storage_chart"),
-
+    path("storage_table", views.storage_table, name="storage_table"),
 ]
