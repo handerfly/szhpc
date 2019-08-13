@@ -70,8 +70,8 @@
                                         y2: 1
                                     },
                                     stops: [
-                                        [0, Highcharts.getOptions().colors[0]],
-                                        [1, Highcharts.Color(Highcharts.getOptions().colors[0]).setOpacity(0).get('rgba')]
+                                        [0, '#66CDAA'],
+                                        [1, '#AFEEEE'],
                                     ]
                                 },
                                 marker: {

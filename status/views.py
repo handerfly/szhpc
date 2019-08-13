@@ -2,16 +2,31 @@ from django.shortcuts import render
 from django.http import  JsonResponse
 from django.db import connections
 from django.http import HttpResponse
-from .models import Quota,Quota_user
+from .models import Quota,Quota_user,cluster_cpu_history, cluster_memory_history
 from django.core import serializers
 import json
 import time
-
+import paramiko
 # Create your views here.
 
 def index(request):
     context = {}
     context['title'] = "运行状态"
+
+    # 获取队列信息
+    ssh = paramiko.SSHClient()
+    ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+    ssh.connect('10.151.225.3', username='root', password='szmb&hpc@123', timeout=5)
+
+    print("----------输出-----------")
+    cmd = '/usr/bin/sh /root/get_queue.sh'
+    stdin, stdout, stderr = ssh.exec_command(cmd)
+    print("----------输出结束------------")
+
+    result=stdout.readlines()
+    context['queue']=result[0]
+    ssh.close()
+    #return HttpResponse(context['queue'])
     return render(request, 'status/index.html', context)
 
 # 实时CPU利用率
@@ -40,14 +55,35 @@ def cpu_chart(request):
 
 # 历史CPU利用率
 def cpu_history(request):
-    select_sql = '''SELECT  mtc_data.AVERAGE, unix_timestamp(mtc_data.COLLECT_TIME) FROM gv_collect_metric as mtc, gv_collect_metric_data_1h as mtc_data, gv_collect_metric_templ as mtc_tp
-    WHERE  mtc.RESOURCE_ID = 1001 AND mtc.ID = mtc_data.METRIC_ID AND  mtc.METRIC_TEMPL_ID = mtc_tp.ID  AND  mtc_tp.DESCRIPTION = "CPU利用率"
-    AND DATE_FORMAT(mtc_data.COLLECT_TIME, '%Y-%d-%m') = DATE_FORMAT(DATE_SUB(NOW(), INTERVAL 1 DAY), '%Y-%d-%m')'''
-    with connections['db_gridview'].cursor() as cursor:
-        cursor.execute(select_sql)
-        row = cursor.fetchall()
-    return  HttpResponse(row)
+    # 获取集群总体历史CPU使用率
+    start_date = request.POST.get('start_date')
+    end_date = request.POST.get('end_date')
 
+    timeArray = time.strptime(start_date, "%Y-%m-%d")
+    timeStamp = str(time.mktime(timeArray))+ '000'
+
+    cpu_data_objs = cluster_cpu_history.objects.values('value', 'collect_time').filter(collect_time__gt=timeStamp)
+    data_set = []
+    for each_obj in cpu_data_objs:
+        data_set.append([int(each_obj['collect_time']), float(each_obj['value'])])
+
+    return JsonResponse({"cpu_history_data":data_set})
+
+# 历史内存利用率
+def memory_history(request):
+    # 获取集群总体历史CPU使用率
+    start_date = request.POST.get('start_date')
+    end_date = request.POST.get('end_date')
+
+    timeArray = time.strptime(start_date, "%Y-%m-%d")
+    timeStamp = str(time.mktime(timeArray))+ '000'
+
+    memory_data_objs = cluster_memory_history.objects.values('value', 'collect_time').filter(collect_time__gt=timeStamp)
+    data_set = []
+    for each_obj in memory_data_objs:
+        data_set.append([int(each_obj['collect_time']), float(each_obj['value'])])
+
+    return JsonResponse({"memory_history_data":data_set})
 
 def memory_chart(request):
     # 获取集群总体CPU使用率

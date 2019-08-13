@@ -45,7 +45,7 @@ class Quota_user(models.Model):
         db_table = "Quota_user"
 
 
-class Cluster_cpu_history(models.Model):
+class cluster_cpu_history(models.Model):
     value = models.CharField(verbose_name="CPU利用率", max_length=50,default='')
     collect_time = models.CharField(verbose_name="收集时间", max_length=50,default='')
 
@@ -55,4 +55,17 @@ class Cluster_cpu_history(models.Model):
 
     class Meta:
         verbose_name_plural = 'CPU利用率'
-        db_table = "Cluster_cpu_history"
+        db_table = "cluster_cpu_history"
+
+
+class cluster_memory_history(models.Model):
+    value = models.CharField(verbose_name="内存利用率", max_length=50,default='')
+    collect_time = models.CharField(verbose_name="收集时间", max_length=50,default='')
+
+
+    def __str__(self):
+        return str(self.value)
+
+    class Meta:
+        verbose_name_plural = '内存利用率'
+        db_table = "cluster_memory_history"

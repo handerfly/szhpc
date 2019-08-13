@@ -13,8 +13,11 @@
 	 background-color: #e8f5ff;
 }
 </style>
-<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css"
-      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" >
+<link href="{% static 'css/bootstrap-table.css' %}" rel="stylesheet" />
+<script src="{% static 'js/bootstrap-table.js' %}"></script>
+<link href="{% static 'css/all.css' %}" rel="stylesheet" />
+
 {% endblock %}
 
 <div class="main-body" style="min-hight:1600px">
@@ -39,9 +42,11 @@
             <div class="mainContent">
                 <div class="introTit clearfix">
                     <h2>运行状态</h2>
+
                 </div>
             </div>
         </div>
+
 
         <div class="row">
             <div class="col-md-12">
@@ -53,8 +58,41 @@
 
         <div class="row">
             <div class="col-md-12">
+                <h3>集群总体历史CPU使用率</h3>
+
+                <div class="mx-auto" id="CPU_history_button">
+                    <button value="2days" type="button" class="btn btn-outline-info" onclick="get_cpu_history(this)">近2日</button>
+                    <button value="7days"  type="button" class="btn btn-outline-info" onclick="get_cpu_history(this)">近7日</button>
+                    <button value="30days"  type="button" class="btn btn-outline-info" onclick="get_cpu_history(this)">近1个月</button>
+                    <button value="2month"  type="button" class="btn btn-outline-info" onclick="get_cpu_history(this)">近2个月</button>
+                    <button value="6month"  type="button" class="btn btn-outline-info" onclick="get_cpu_history(this)">近6个月</button>
+                    <button value="12month"  type="button" class="btn btn-outline-info" onclick="get_cpu_history(this)">近1年</button>
+                </div>
+                <div id="CPU_history"></div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="row">
+            <div class="col-md-12">
                 <h3>集群总体内存使用率</h3>
                 <div id="Memory"></div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h3>集群总体历史内存使用率</h3>
+                <div class="mx-auto" id="Memory_history_button">
+                    <button value="2days" type="button" class="btn btn-outline-info" onclick="get_memory_history(this)">近2日</button>
+                    <button value="7days"  type="button" class="btn btn-outline-info" onclick="get_memory_history(this)">近7日</button>
+                    <button value="30days"  type="button" class="btn btn-outline-info" onclick="get_memory_history(this)">近1个月</button>
+                    <button value="2month"  type="button" class="btn btn-outline-info" onclick="get_memory_history(this)">近2个月</button>
+                    <button value="6month"  type="button" class="btn btn-outline-info" onclick="get_memory_history(this)">近6个月</button>
+                    <button value="12month"  type="button" class="btn btn-outline-info" onclick="get_memory_history(this)">近1年</button>
+                </div>
+                <div id="Memory_history"></div>
             </div>
         </div>
         <hr>
@@ -118,10 +156,26 @@
                 </div>
             </div>
         </div>
+        <hr>
+         <div class="row">
+            <div class="col-md-12">
+<!--show detail start -->
 
+                <div class="table-demo text-left">
+                    <table id="table" data-toggle="table" data-detail-view="true" data-detail-formatter="detailFormatter" style="word-break:break-all; word-wrap:break-all;"></table>
+                </div>
+
+<!--show detail end -->
+            </div>
+
+        </div>
+        <hr>
+        
         <div class="clearfix"></div>
     </div>
 </div>
+
+
 
 {% endblock %}
 
@@ -131,22 +185,48 @@
 <script src="http://cdn.highcharts.com.cn/highstock/highstock.js"></script>
 <script type="text/javascript">
      Highcharts.setOptions({ global: { useUTC: false } });
-
 </script>
+<script type="text/javascript">
+    var columns = [{
+       field:"PartitionName",
+      title: '队列名称'
+    }, {
+        field: 'AllowGroups',
+        title: '可访问组'
+    },
+     {
+    field: 'AllowAccounts',
+        title: '可访问账号'
+    },
+    {
+        field: 'Nodes',
+        title: '可访问节点'
+    },
+    ];
 
+
+    $('#table').bootstrapTable({
+        columns: columns,
+        data: [{{ queue|safe }}],
+    });
+
+function detailFormatter(index, row) {
+var html = []
+$.each(row, function (key, value) {
+  html.push('<p><b>' + key + ':</b> ' + value + '</p>')
+});
+return html.join('')
+}
+</script>
 <script src="{% static 'ajax/cpu.js'%}"></script>
 <script src="{% static 'ajax/memory.js'%}"></script>
 <script src="{% static 'ajax/group_cpu.js'%}"></script>
 <script src="{% static 'ajax/group_memory.js'%}"></script>
 <script src="{% static 'ajax/storage.js'%}"></script>
 <script src="{% static 'ajax/storage_table.js'%}"></script>
+<script src="{% static 'ajax/cpu_history.js'%}"></script>
+<script src="{% static 'ajax/memory_history.js'%}"></script>
 <script>
-
-
-
-
-
-
 function timeDown(limit) {
    if (limit == 60) {
    get_cpu();
@@ -170,8 +250,8 @@ function timeDown(limit) {
 
 $(document).ready(function() {
    timeDown(60);
-
-
+   default_cpu_history();
+   default_memory_history();
     })
 
 

@@ -30,4 +30,5 @@ urlpatterns = [
     path("storage_chart", views.storage_chart, name="storage_chart"),
     path("storage_table", views.storage_table, name="storage_table"),
     path("cpu_history", views.cpu_history, name="cpu_history"),
+    path("memory_history", views.memory_history, name="memory_history"),
 ]
