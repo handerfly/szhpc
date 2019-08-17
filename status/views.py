@@ -224,6 +224,7 @@ def storage_chart(request):
 
 # 队列占用节点数
 def queue_alloc_chart(request):
+    print("hello testing ")
     start_date = request.POST.get('start_date')
     end_date = request.POST.get('end_date')
     #start_date='2019-08-17'
@@ -240,6 +241,7 @@ def queue_alloc_chart(request):
     for each_obj in SixminRadar_data_objs:
         sixminradar_data_set.append([int(each_obj['collect_time']), float(each_obj['value'])])
 
-    queue_alloc_dic = {'queue_alloc_data':[{"name":"HAPS","data":haps_data_set},{"name":"SixminRadar","data":sixminradar_data_set}]}
-
+    #queue_alloc_dic = {'queue_alloc_data':[{"name":"HAPS","data":haps_data_set},{"name":"SixminRadar","data":sixminradar_data_set}]}
+    queue_alloc_dic = {'queue_alloc_data': [{"name": "HAPS", "data": [[154564,12],[14564654,54]]},
+                                            {"name": "SixminRadar", "data": [[154564,52],[14564654,94]]}]}
     return JsonResponse(queue_alloc_dic)

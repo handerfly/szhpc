@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="22501eca-6ce5-4096-ab77-7cdfa72b9439" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/static/ajax/queue_alloc.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/ajax/queue_alloc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/status/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/status/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -56,11 +56,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/ajax/queue_alloc.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="303">
-              <caret line="83" column="42" selection-start-line="83" selection-start-column="42" selection-end-line="83" selection-end-column="42" />
+            <state relative-caret-position="288">
+              <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
               <folding>
                 <element signature="e#0#9549#0" />
                 <element signature="e#0#9549#0" />
@@ -69,11 +69,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/status/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="424">
-              <caret line="244" column="30" selection-start-line="244" selection-start-column="30" selection-end-line="244" selection-end-column="30" />
+            <state relative-caret-position="136">
+              <caret line="226" column="25" selection-start-line="226" selection-start-column="25" selection-end-line="226" selection-end-column="25" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
                 <element signature="e#3038#3827#0" />
@@ -181,11 +181,11 @@
         <option value="$PROJECT_DIR$/static/css/bootstrap.min.css" />
         <option value="$PROJECT_DIR$/status/models.py" />
         <option value="$PROJECT_DIR$/status/urls.py" />
-        <option value="$PROJECT_DIR$/status/views.py" />
         <option value="$PROJECT_DIR$/static/ajax/cpu_history.js" />
         <option value="$PROJECT_DIR$/static/ajax/group_cpu.js" />
         <option value="$PROJECT_DIR$/status/templates/status/index.html" />
         <option value="$PROJECT_DIR$/static/ajax/queue_alloc.js" />
+        <option value="$PROJECT_DIR$/status/views.py" />
       </list>
     </option>
   </component>
@@ -654,20 +654,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/status/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="244" column="30" selection-start-line="244" selection-start-column="30" selection-end-line="244" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-            <element signature="e#3038#3827#0" />
-            <element signature="e#6676#7765#0" />
-            <element signature="e#7810#8112#0" />
-            <element signature="e#8160#10420#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/status/templates/status/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -691,11 +677,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/static/ajax/queue_alloc.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="83" column="42" selection-start-line="83" selection-start-column="42" selection-end-line="83" selection-end-column="42" />
+        <state relative-caret-position="288">
+          <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
           <folding>
             <element signature="e#0#9549#0" />
             <element signature="e#0#9549#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/status/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="226" column="25" selection-start-line="226" selection-start-column="25" selection-end-line="226" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+            <element signature="e#3038#3827#0" />
+            <element signature="e#6676#7765#0" />
+            <element signature="e#7810#8112#0" />
+            <element signature="e#8160#10420#0" />
           </folding>
         </state>
       </provider>
