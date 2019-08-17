@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="22501eca-6ce5-4096-ab77-7cdfa72b9439" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/status/templates/status/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/status/templates/status/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ajax/queue_alloc.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/ajax/queue_alloc.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,10 +33,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/status/templates/status/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="393">
+            <state relative-caret-position="105">
               <caret line="215" column="18" selection-start-line="215" selection-start-column="18" selection-end-line="215" selection-end-column="18" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
@@ -56,11 +56,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/static/ajax/queue_alloc.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="165" column="41" selection-start-line="165" selection-start-column="41" selection-end-line="165" selection-end-column="41" />
+            <state relative-caret-position="303">
+              <caret line="83" column="42" selection-start-line="83" selection-start-column="42" selection-end-line="83" selection-end-column="42" />
               <folding>
                 <element signature="e#0#9549#0" />
                 <element signature="e#0#9549#0" />
@@ -184,8 +184,8 @@
         <option value="$PROJECT_DIR$/status/views.py" />
         <option value="$PROJECT_DIR$/static/ajax/cpu_history.js" />
         <option value="$PROJECT_DIR$/static/ajax/group_cpu.js" />
-        <option value="$PROJECT_DIR$/static/ajax/queue_alloc.js" />
         <option value="$PROJECT_DIR$/status/templates/status/index.html" />
+        <option value="$PROJECT_DIR$/static/ajax/queue_alloc.js" />
       </list>
     </option>
   </component>
@@ -654,17 +654,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/ajax/queue_alloc.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="165" column="41" selection-start-line="165" selection-start-column="41" selection-end-line="165" selection-end-column="41" />
-          <folding>
-            <element signature="e#0#9549#0" />
-            <element signature="e#0#9549#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/status/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="424">
@@ -681,7 +670,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/status/templates/status/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
+        <state relative-caret-position="105">
           <caret line="215" column="18" selection-start-line="215" selection-start-column="18" selection-end-line="215" selection-end-column="18" />
           <folding>
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
@@ -696,6 +685,17 @@
             <element signature="n#div#6;n#div#0;n#div#0;n#!!top" />
             <element signature="n#div#7;n#div#0;n#div#0;n#!!top" />
             <element signature="n#style#0;n#table#0;n#div#0;n#div#0;n#div#10;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/ajax/queue_alloc.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="83" column="42" selection-start-line="83" selection-start-column="42" selection-end-line="83" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#9549#0" />
+            <element signature="e#0#9549#0" />
           </folding>
         </state>
       </provider>
