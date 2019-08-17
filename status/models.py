@@ -69,3 +69,16 @@ class cluster_memory_history(models.Model):
     class Meta:
         verbose_name_plural = '内存利用率'
         db_table = "cluster_memory_history"
+
+class queue_alloc(models.Model):
+    queue = models.CharField(verbose_name="队列名称", max_length=50)
+    value = models.CharField(verbose_name="占用节点数", max_length=50)
+    collect_time = models.CharField(verbose_name="收集时间", max_length=50)
+
+
+    def __str__(self):
+        return self.queue
+
+    class Meta:
+        verbose_name_plural = '队列占用节点数'
+        db_table = "queue_alloc"

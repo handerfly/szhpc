@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import  JsonResponse
 from django.db import connections
 from django.http import HttpResponse
-from .models import Quota,Quota_user,cluster_cpu_history, cluster_memory_history
+from .models import Quota,Quota_user,cluster_cpu_history, cluster_memory_history,queue_alloc
 from django.core import serializers
 import json
 import time
@@ -219,3 +219,27 @@ def storage_chart(request):
 
     # data = [[1564729202000, 78.41],[1564729265000, 74.89],[1564729324000, 75.5],[1564729385000, 75.34],[1564729445000, 74.23],[1564729501000, 74.36],[1564729564000, 74.54],[1564729624000, 74.17],[1564729684000, 74.86],[1564729745000, 74.85],[1564729801000, 73.69],[1564729865000, 72.82],[1564729925000, 71.59],[1564729985000, 70.74],[1564730045000, 60.75],[1564730101000, 54.84],[1564730165000, 53.66],[1564730225000, 53.13],[1564730285000, 52.57],[1564730345000, 53.63],[1564730401000, 54.35],[1564730465000, 54.49],[1564730525000, 55.98],[1564730584000, 60.79],[1564730644000, 58.87],[1564730701000, 58.8],[1564730765000, 54.28],[1564730825000, 58.95],[1564730885000, 61.14],[1564730945000, 71.09],[1564731001000, 75.41],[1564731065000, 75.76],[1564731125000, 71.26],[1564731185000, 67.51],[1564731245000, 75.07],[1564731301000, 76.05],[1564731365000, 76.0],[1564731425000, 75.61],[1564731484000, 76.56],[1564731545000, 75.01],[1564731601000, 73.96],[1564731664000, 74.59],[1564731724000, 73.55],[1564731785000, 72.76],[1564731845000, 72.39],[1564731901000, 71.76],[1564731965000, 69.96],[1564732024000, 70.15],[1564732085000, 69.63],[1564732145000, 68.12],[1564732201000, 69.32],[1564732265000, 68.59],[1564732325000, 65.9],[1564732385000, 67.31],[1564732445000, 65.95],[1564732501000, 64.26],[1564732565000, 62.55],[1564732625000, 62.35],[1564732685000, 60.96],[1564732745000, 59.72],[1564732801000, 58.94],[1564732865000, 59.48],[1564732925000, 54.53]]
     return JsonResponse({"status":"success","back_data":user_data_set,"soft_threshold":soft_threshold,"hard_threshold":hard_threshold})
+
+
+
+# 队列占用节点数
+def queue_alloc_chart(request):
+    start_date = request.POST.get('start_date')
+    end_date = request.POST.get('end_date')
+    #start_date='2019-08-17'
+    timeArray = time.strptime(start_date, "%Y-%m-%d")
+    timeStamp = str(time.mktime(timeArray))+ '000'
+
+    HAPS_data_objs = queue_alloc.objects.values('value', 'collect_time').filter(collect_time__gt=timeStamp,queue="HAPS")
+    SixminRadar_data_objs = queue_alloc.objects.values('value', 'collect_time').filter(collect_time__gt=timeStamp,queue="SixminRadar")
+    haps_data_set = []
+    sixminradar_data_set = []
+    for each_obj in HAPS_data_objs:
+        haps_data_set.append([int(each_obj['collect_time']), float(each_obj['value'])])
+
+    for each_obj in SixminRadar_data_objs:
+        sixminradar_data_set.append([int(each_obj['collect_time']), float(each_obj['value'])])
+
+    queue_alloc_dic = {'queue_alloc_data':[{"name":"HAPS","data":haps_data_set},{"name":"SixminRadar","data":sixminradar_data_set}]}
+
+    return JsonResponse(queue_alloc_dic)

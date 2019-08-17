@@ -151,15 +151,22 @@
 
         <div class="row">
             <div class="col-md-12">
-                <h3>运行队列</h3>
-                <div id="line22">
-
+                <h3>队列占用节点数</h3>
+                <div class="mx-auto" id="queue_button">
+                    <button value="2days" type="button" class="btn btn-outline-info" onclick="get_queue_alloc(this)">近2日</button>
+                    <button value="7days"  type="button" class="btn btn-outline-info" onclick="get_queue_alloc(this)">近7日</button>
+                    <button value="30days"  type="button" class="btn btn-outline-info" onclick="get_queue_alloc(this)">近1个月</button>
+                    <button value="2month"  type="button" class="btn btn-outline-info" onclick="get_queue_alloc(this)">近2个月</button>
+                    <button value="6month"  type="button" class="btn btn-outline-info" onclick="get_queue_alloc(this)">近6个月</button>
+                    <button value="12month"  type="button" class="btn btn-outline-info" onclick="get_queue_alloc(this)">近1年</button>
                 </div>
+                <div id="queue"></div>
             </div>
         </div>
         <hr>
          <div class="row">
             <div class="col-md-12">
+                <h3>队列信息</h3>
 <!--show detail start -->
 
                 <div class="table-demo text-left">
@@ -203,15 +210,7 @@
     {
         field: 'TotalNodes',
         title: '可访问节点数'
-    },
-    {
-    field: 'AllowAccounts',
-        title: '可访问账号'
-    },
-    {
-        field: 'Nodes',
-        title: '可访问节点'
-    },
+    }
     ];
 
 
@@ -236,6 +235,7 @@ return html.join('')
 <script src="{% static 'ajax/storage_table.js'%}"></script>
 <script src="{% static 'ajax/cpu_history.js'%}"></script>
 <script src="{% static 'ajax/memory_history.js'%}"></script>
+<script src="{% static 'ajax/queue_alloc.js'%}"></script>
 
 
 
@@ -265,6 +265,7 @@ $(document).ready(function() {
    timeDown(60);
    default_cpu_history();
    default_memory_history();
+   default_queue_alloc();
     })
 
 
