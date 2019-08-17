@@ -13,6 +13,7 @@
 	 background-color: #e8f5ff;
 }
 </style>
+
 <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" >
 <link href="{% static 'css/bootstrap-table.css' %}" rel="stylesheet" />
 <script src="{% static 'js/bootstrap-table.js' %}"></script>
@@ -42,7 +43,6 @@
             <div class="mainContent">
                 <div class="introTit clearfix">
                     <h2>运行状态</h2>
-
                 </div>
             </div>
         </div>
@@ -68,6 +68,7 @@
                     <button value="6month"  type="button" class="btn btn-outline-info" onclick="get_cpu_history(this)">近6个月</button>
                     <button value="12month"  type="button" class="btn btn-outline-info" onclick="get_cpu_history(this)">近1年</button>
                 </div>
+
                 <div id="CPU_history"></div>
             </div>
         </div>
@@ -170,7 +171,7 @@
 
         </div>
         <hr>
-        
+
         <div class="clearfix"></div>
     </div>
 </div>
@@ -182,11 +183,12 @@
 {% block script_extends %}
 
 
-<script src="http://cdn.highcharts.com.cn/highstock/highstock.js"></script>
+<script src="{% static 'js/highstock.js'%}"></script>
 <script type="text/javascript">
      Highcharts.setOptions({ global: { useUTC: false } });
 </script>
 <script type="text/javascript">
+
     var columns = [{
        field:"PartitionName",
       title: '队列名称'
@@ -194,7 +196,15 @@
         field: 'AllowGroups',
         title: '可访问组'
     },
-     {
+    {
+        field: 'TotalCPUs',
+        title: '可访问核心数'
+    },
+    {
+        field: 'TotalNodes',
+        title: '可访问节点数'
+    },
+    {
     field: 'AllowAccounts',
         title: '可访问账号'
     },
@@ -226,6 +236,9 @@ return html.join('')
 <script src="{% static 'ajax/storage_table.js'%}"></script>
 <script src="{% static 'ajax/cpu_history.js'%}"></script>
 <script src="{% static 'ajax/memory_history.js'%}"></script>
+
+
+
 <script>
 function timeDown(limit) {
    if (limit == 60) {
