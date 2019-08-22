@@ -169,7 +169,7 @@ line-height:35px
 }
 .header .logo a.xkb_logo:hover{color:RGB(230,135,135);}
 .header .logo img{
-	width:213px;
+	/*width:213px;*/
 }
 .header .subnavLeft {
 	padding-left:0px;
