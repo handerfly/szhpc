@@ -81,7 +81,7 @@ function getCurrentDate() {
                             zoomType: 'x'
                         },
                         title: {
-                            text: '历史CPU使用率'
+                            text: '队列占用节点数'
                         },
                         subtitle: {
                             text: document.ontouchstart === undefined ?
@@ -115,7 +115,7 @@ function getCurrentDate() {
                         },
                         yAxis: {
                             title: {
-                                text: '集群总体历史CPU使用率 %'
+                                text: '队列占用节点数'
                             },
 
                         },
@@ -177,7 +177,7 @@ $.ajax({
                             zoomType: 'x'
                         },
                         title: {
-                            text: '历史内存使用率'
+                            text: '队列占用节点数'
                         },
                         subtitle: {
                             text: document.ontouchstart === undefined ?
@@ -211,7 +211,7 @@ $.ajax({
                         },
                         yAxis: {
                             title: {
-                                text: '集群总体历史内存使用率 %'
+                                text: '队列占用节点数'
                             },
 
                         },

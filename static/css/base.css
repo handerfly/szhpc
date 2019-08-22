@@ -219,8 +219,8 @@ line-height:35px
  *background:url(search_normal.png) 0 3px no-repeat;
 }
 .header .subNav {
-	background:#700005; 
-	border-bottom:0px solid #700005;
+	background:#0099CC;
+	border-bottom:0px solid #0099CC;
    overflow-x:hidden;
 }
 .header .subNav .onlymobileshow{
