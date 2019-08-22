@@ -59,7 +59,7 @@ $(function(){
                         },
                         yAxis: {
                             title: {
-                                text: '磁盘配额(TB)'
+                                text: '磁盘已使用(TB)'
                             },
                             //1
                            plotLines: [{
@@ -112,7 +112,7 @@ $(function(){
                         },
                         series: [{
                             type: 'line',
-                            name: data[0].username+'磁盘配额(TB)',
+                            name: data[0].username+'磁盘已使用(TB)',
                             data: back_data
                         }]
                     });
@@ -173,7 +173,7 @@ $(function(){
                         },
                         yAxis: {
                             title: {
-                                text: '磁盘配额(TB)'
+                                text: '磁盘已使用(TB)'
                             },
                             //1
                            plotLines: [{
@@ -226,7 +226,7 @@ $(function(){
                         },
                         series: [{
                             type: 'line',
-                            name: select_value+'磁盘配额(TB)',
+                            name: select_value+'磁盘已使用(TB)',
                             data: select_data.back_data
                         }]
                     });
