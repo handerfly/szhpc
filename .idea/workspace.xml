@@ -2,12 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="22501eca-6ce5-4096-ab77-7cdfa72b9439" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hpc/templates/hpc/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/hpc/templates/hpc/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/banner/banner20180104-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/banner/banner20180502-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/banner/banner20180503-3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/comm - 副本.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/elasticsearch-analysis-ik-7.1.0.tar.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/slider.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/slider.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/banner/banner20171211.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/banner/banner20180104.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/banner/banner20180108.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/banner/banner20181026.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/banner/banner20181119.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/banner/banner20181120.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/slider.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/slider.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,11 +21,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/hpc/templates/hpc/index.html">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/js/slider.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="656">
-              <caret line="126" column="33" selection-start-line="126" selection-start-column="33" selection-end-line="126" selection-end-column="33" />
+            <state relative-caret-position="360">
+              <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/static/css/slider.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="96">
+              <caret line="4" column="5" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -69,7 +82,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/download/urls.py" />
         <option value="$PROJECT_DIR$/guide/urls.py" />
         <option value="$PROJECT_DIR$/resource/urls.py" />
         <option value="$PROJECT_DIR$/hpc/templates/hpc/about.html" />
@@ -116,16 +128,17 @@
         <option value="$PROJECT_DIR$/guide/templates/guide/index.html" />
         <option value="$PROJECT_DIR$/templates/base.html" />
         <option value="$PROJECT_DIR$/static/css/base.css" />
-        <option value="$PROJECT_DIR$/static/css/slider.css" />
         <option value="$PROJECT_DIR$/status/templates/status/index.html" />
         <option value="$PROJECT_DIR$/static/ajax/storage.js" />
         <option value="$PROJECT_DIR$/hpc/templates/hpc/index.html" />
+        <option value="$PROJECT_DIR$/static/js/slider.js" />
+        <option value="$PROJECT_DIR$/static/css/slider.css" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="181" />
-    <option name="y" value="292" />
+    <option name="x" value="97" />
+    <option name="y" value="219" />
     <option name="width" value="1731" />
     <option name="height" value="782" />
   </component>
@@ -134,6 +147,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -162,6 +176,23 @@
             <path>
               <item name="szhpc" type="b2602c69:ProjectViewProjectNode" />
               <item name="szhpc" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="szhpc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="szhpc" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="szhpc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="szhpc" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="szhpc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="szhpc" type="462c0819:PsiDirectoryNode" />
               <item name="szhpc" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -173,7 +204,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -249,8 +279,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="137" y="568" width="1731" height="782" extended-state="0" />
-    <editor active="true" />
+    <frame x="97" y="219" width="1731" height="782" extended-state="0" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14176019" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -291,67 +320,6 @@
     </layout-to-restore>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/hpc/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/guide/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/download/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="15" column="21" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/contact/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/contact/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="15" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/ajax/comm.js" />
-    <entry file="file://$PROJECT_DIR$/szhpc/wsgi.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <element signature="e#221#230#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/status/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -453,9 +421,6 @@
     <entry file="file://$PROJECT_DIR$/static/css/bootstrap-datetimepicker.min.css" />
     <entry file="file://$PROJECT_DIR$/static/js/bootstrap-datetimepicker.zh-CN.js" />
     <entry file="file://$PROJECT_DIR$/static/js/bootstrap-datetimepicker.min.js" />
-    <entry file="file://$PROJECT_DIR$/static/js/slider.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/css/all.css">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -470,13 +435,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/comm - 副本.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="19" column="21" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/comm - 副本.js" />
     <entry file="file://$PROJECT_DIR$/static/css/index.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
@@ -537,13 +496,6 @@
           <folding>
             <element signature="e#631#663#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/slider.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -618,8 +570,51 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/hpc/templates/hpc/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="656">
-          <caret line="126" column="33" selection-start-line="126" selection-start-column="33" selection-end-line="126" selection-end-column="33" />
+        <state relative-caret-position="1435">
+          <caret line="71" column="55" selection-start-line="71" selection-start-column="55" selection-end-line="71" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2001" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/inner.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-441">
+          <caret line="15" column="35" lean-forward="true" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/bootstrap-table.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/comm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-993" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/echarts.min.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/highstock.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/html5.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/slider.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/slider.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="4" column="5" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
         </state>
       </provider>
     </entry>

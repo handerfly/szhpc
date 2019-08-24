@@ -224,9 +224,9 @@ function slideNext(){
 function adjustWidth()
 {
 	var new_height = win_width / 3;
-	if (new_height > 460)
+	if (new_height > 380)
 	{
-		new_height = 460;
+		new_height = 380;
 	}
 	$(".iosSliderDemo").css("padding-bottom", new_height);
 	$(".fluidHeight").height(new_height);
