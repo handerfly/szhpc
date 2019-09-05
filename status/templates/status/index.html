@@ -245,7 +245,7 @@ return html.join('')
 
 <script>
 function timeDown(limit) {
-   if (limit == 60) {
+   if (limit == 300) {
    get_cpu();
    get_memory();
    get_group_memory();
@@ -255,7 +255,7 @@ function timeDown(limit) {
    limit--;
 
    if (limit < 0) {
-       limit = 60;
+       limit = 300;
    }
 
    setTimeout(function() {
@@ -266,7 +266,7 @@ function timeDown(limit) {
 
 
 $(document).ready(function() {
-   timeDown(60);
+   timeDown(300);
    default_cpu_history();
    default_memory_history();
    default_queue_alloc();

@@ -116,6 +116,7 @@ def group_memory_chart(request):
 
 
     all_dic_list = []
+    visible = 'false'
     for each_group in row:
         # 查询每一组的内存使用率
         group_sub_data_list = []
@@ -125,7 +126,7 @@ def group_memory_chart(request):
             single_group_row = cursor.fetchall()
             for each_group_memory_value in single_group_row:
                 group_sub_data_list.append([each_group_memory_value[0]*1000,float(each_group_memory_value[1])])
-        all_dic_list.append({"name":each_group[0],"data":group_sub_data_list})
+        all_dic_list.append({"name":each_group[0],"data":group_sub_data_list,"visible": visible})
 
 
     group_memory_dict_list = {'status': 'success', 'json_group_memory_data': all_dic_list}
@@ -142,6 +143,7 @@ def group_cpu_chart(request):
 
 
     all_dic_list = []
+    visible = 'false'
     for each_group in row:
         # 查询每一组的内存使用率
         group_sub_data_list = []
@@ -151,7 +153,8 @@ def group_cpu_chart(request):
             single_group_row = cursor.fetchall()
             for each_group_cpu_value in single_group_row:
                 group_sub_data_list.append([each_group_cpu_value[0]*1000,float(each_group_cpu_value[1])])
-        all_dic_list.append({"name":each_group[0],"data":group_sub_data_list})
+
+        all_dic_list.append({"name":each_group[0],"data":group_sub_data_list,"visible": visible})
         # all_dic_list.append(",")
 
 
