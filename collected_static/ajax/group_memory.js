@@ -8,7 +8,7 @@
             },
             success:function(mydata){
                if(mydata.status=="success"){
-                    // 图表配置
+                       // 图表配置
                     function createChart() {
                             Highcharts.chart('group_memory',{
                                 chart: {
