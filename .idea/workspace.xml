@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="22501eca-6ce5-4096-ab77-7cdfa72b9439" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/collected_static/css/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/collected_static/css/base.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/guide/templates/guide/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/guide/templates/guide/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hpc/templates/hpc/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/hpc/templates/hpc/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resource/templates/resource/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/resource/templates/resource/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/base.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/szhpc/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/szhpc/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,11 +12,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/szhpc/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+            <state relative-caret-position="552">
+              <caret line="182" column="10" lean-forward="true" selection-start-line="182" selection-start-column="10" selection-end-line="182" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -72,11 +66,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hpc/templates/hpc/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="115" column="25" selection-start-line="115" selection-start-column="25" selection-end-line="115" selection-end-column="25" />
+            <state relative-caret-position="168">
+              <caret line="136" selection-start-line="136" selection-end-line="136" />
             </state>
           </provider>
         </entry>
@@ -174,9 +168,9 @@
         <option value="$PROJECT_DIR$/templates/base.html" />
         <option value="$PROJECT_DIR$/resource/templates/resource/index.html" />
         <option value="$PROJECT_DIR$/guide/templates/guide/index.html" />
-        <option value="$PROJECT_DIR$/hpc/templates/hpc/index.html" />
         <option value="$PROJECT_DIR$/static/css/base.css" />
         <option value="$PROJECT_DIR$/szhpc/settings.py" />
+        <option value="$PROJECT_DIR$/hpc/templates/hpc/index.html" />
       </list>
     </option>
   </component>
@@ -629,10 +623,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hpc/templates/hpc/index.html">
+    <entry file="file://$PROJECT_DIR$/szhpc/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="115" column="25" selection-start-line="115" selection-start-column="25" selection-end-line="115" selection-end-column="25" />
+        <state relative-caret-position="552">
+          <caret line="182" column="10" lean-forward="true" selection-start-line="182" selection-start-column="10" selection-end-line="182" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -643,10 +637,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/szhpc/settings.py">
+    <entry file="file://$PROJECT_DIR$/hpc/templates/hpc/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+        <state relative-caret-position="168">
+          <caret line="136" selection-start-line="136" selection-end-line="136" />
         </state>
       </provider>
     </entry>
