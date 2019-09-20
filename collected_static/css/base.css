@@ -13,7 +13,7 @@ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pr
 }
 body {
 	color: #565656;
-	line-height: 20px;
+	line-height: 2;
 	font-size: 12px;
 	font-family:"Arial",'Microsoft Yahei',"Lucida Grande", "Tahoma", "Helvetica", "sans-serif";
 	margin: 0px;
