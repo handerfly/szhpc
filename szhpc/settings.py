@@ -169,7 +169,7 @@ CKEDITOR_CONFIGS = {
             ['Maximize', 'ShowBlocks', '-'],
         ],
         'toolbar_Full': [
-            ['Styles', 'Format', 'Bold', 'Italic', 'Underline', 'Strike', 'SpellChecker', 'Undo', 'Redo','JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock'],
+            ['Styles', 'Format','FontSize', 'Bold', 'Italic', 'Underline', 'Strike', 'SpellChecker', 'Undo', 'Redo','JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock'],
             ['Link', 'Unlink', 'Anchor','RemoveFormat','CopyFormatting','BlockQuote','Outdent','Indent'],
             ['Image', 'Flash', 'Table', 'HorizontalRule','NumberedList','BulletedList'],
             ['TextColor', 'BGColor'],
