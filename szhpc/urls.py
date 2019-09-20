@@ -18,6 +18,10 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 from hpc import views as hpc
+
+from django.urls import path, include, re_path
+from django.views.static import serve
+
 urlpatterns = [
     path('', hpc.index, name='index'),
     # 后台
@@ -36,6 +40,7 @@ urlpatterns = [
     path('resource/', include('resource.urls')),
     # 运行状态
     path('status/', include('status.urls')),
+    re_path(r'^media/(?P<path>.*)$', serve, {"document_root": settings.MEDIA_ROOT}),
 
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
