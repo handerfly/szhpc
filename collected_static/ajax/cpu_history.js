@@ -183,11 +183,10 @@ function default_cpu_history(){
                             zoomType: 'x'
                         },
                         title: {
-                            text: '历史CPU使用率'
+                            text: ''
                         },
                         subtitle: {
-                            text: document.ontouchstart === undefined ?
-                            '鼠标拖动可以进行缩放' : '手势操作进行缩放'
+                            text: ''
                         },
                         xAxis: {
                             type: 'datetime',

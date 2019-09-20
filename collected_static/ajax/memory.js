@@ -22,8 +22,7 @@
                             text: ''
                         },
                         subtitle: {
-                            text: document.ontouchstart === undefined ?
-                            '鼠标拖动可以进行缩放' : '手势操作进行缩放'
+                            text: ''
                         },
                         xAxis: {
                             type: 'datetime',
