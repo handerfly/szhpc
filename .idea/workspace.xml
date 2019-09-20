@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="22501eca-6ce5-4096-ab77-7cdfa72b9439" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/static/ajax/cpu.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/ajax/cpu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/ajax/cpu_history.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/ajax/cpu_history.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/ajax/group_cpu.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/ajax/group_cpu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/ajax/group_memory.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/ajax/group_memory.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/ajax/memory.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/ajax/memory.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/ajax/memory_history.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/ajax/memory_history.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/ajax/queue_alloc.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/ajax/queue_alloc.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/ajax/storage.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/ajax/storage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/szhpc/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/szhpc/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,7 +16,24 @@
         <entry file="file://$PROJECT_DIR$/szhpc/settings.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="392">
-              <caret line="25" column="12" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
+              <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/base.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="312">
+              <caret line="49" column="23" selection-start-line="48" selection-start-column="16" selection-end-line="53" selection-end-column="21" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#section#0;n#section#0;n#section#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#ul#0;n#div#0;n#section#0;n#section#0;n#section#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#0;n#ul#0;n#div#0;n#section#0;n#section#0;n#section#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#div#0;n#section#0;n#section#0;n#section#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#section#3;n#section#0;n#section#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#section#1;n#section#1;n#section#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -34,15 +43,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-1392">
               <caret line="20" column="43" selection-start-line="20" selection-start-column="43" selection-end-line="20" selection-end-column="43" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/ajax/cpu.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1296">
-              <caret line="24" column="35" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -65,7 +65,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/ajax/storage.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-1353">
@@ -192,7 +192,6 @@
         <option value="$PROJECT_DIR$/hpc/admin.py" />
         <option value="$PROJECT_DIR$/hpc/views.py" />
         <option value="$PROJECT_DIR$/szhpc/urls.py" />
-        <option value="$PROJECT_DIR$/templates/base.html" />
         <option value="$PROJECT_DIR$/guide/templates/guide/index.html" />
         <option value="$PROJECT_DIR$/static/css/base.css" />
         <option value="$PROJECT_DIR$/hpc/templates/hpc/index.html" />
@@ -200,12 +199,13 @@
         <option value="$PROJECT_DIR$/static/ajax/cpu.js" />
         <option value="$PROJECT_DIR$/static/ajax/cpu_history.js" />
         <option value="$PROJECT_DIR$/static/ajax/group_cpu.js" />
-        <option value="$PROJECT_DIR$/szhpc/settings.py" />
         <option value="$PROJECT_DIR$/static/ajax/group_memory.js" />
         <option value="$PROJECT_DIR$/static/ajax/memory_history.js" />
         <option value="$PROJECT_DIR$/static/ajax/memory.js" />
         <option value="$PROJECT_DIR$/static/ajax/storage.js" />
         <option value="$PROJECT_DIR$/static/ajax/queue_alloc.js" />
+        <option value="$PROJECT_DIR$/szhpc/settings.py" />
+        <option value="$PROJECT_DIR$/templates/base.html" />
       </list>
     </option>
   </component>
@@ -231,13 +231,7 @@
             <path>
               <item name="szhpc" type="b2602c69:ProjectViewProjectNode" />
               <item name="szhpc" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="szhpc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="szhpc" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="ajax" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -539,21 +533,6 @@
         <state relative-caret-position="-101" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3744">
-          <caret line="156" selection-start-line="156" selection-start-column="4" selection-end-line="160" selection-end-column="38" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#section#0;n#section#0;n#section#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#ul#0;n#div#0;n#section#0;n#section#0;n#section#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#0;n#ul#0;n#div#0;n#section#0;n#section#0;n#section#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#div#0;n#section#0;n#section#0;n#section#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#section#3;n#section#0;n#section#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#section#1;n#section#1;n#section#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/szhpc/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="451">
@@ -609,13 +588,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/szhpc/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="25" column="12" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/ajax/group_cpu.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1200">
@@ -662,6 +634,28 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1353">
           <caret line="143" column="35" selection-start-line="143" selection-start-column="35" selection-end-line="143" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/szhpc/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="49" column="23" selection-start-line="48" selection-start-column="16" selection-end-line="53" selection-end-column="21" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#section#0;n#section#0;n#section#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#ul#0;n#div#0;n#section#0;n#section#0;n#section#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#0;n#ul#0;n#div#0;n#section#0;n#section#0;n#section#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#div#0;n#section#0;n#section#0;n#section#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#section#3;n#section#0;n#section#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#section#1;n#section#1;n#section#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
