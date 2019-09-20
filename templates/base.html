@@ -88,10 +88,10 @@
                 <a id="about" href="{% url 'hpc:hpc_index'%}" class="{% if request.path == '/hpc/' %}current{% endif %}">
                   <span class="nav_long">平台概况</span>
                   <span class="nav_short short">平台概况</span></a>
-                <ul class="sub-nav" style="display: none;">
-                  <li>
-                    <a href="{% url 'hpc:hpc_about'%}">平台简介</a></li>
-                </ul>
+<!--                <ul class="sub-nav" style="display: none;">-->
+<!--                  <li>-->
+<!--                    <a href="{% url 'hpc:hpc_about'%}">平台简介</a></li>-->
+<!--                </ul>-->
               </li>
               <li>
                 <a id="resource" href="{% url 'resource:resource_index'%}" class="{% if request.path == '/resource/' %}current{% endif %}">

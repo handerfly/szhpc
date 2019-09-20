@@ -5,7 +5,9 @@ from hpc.models import *
 class AboutAdmin(admin.ModelAdmin):
     list_display = ['id', 'content']
 
-
+@admin.register(Links)
+class LinksAdmin(admin.ModelAdmin):
+    list_display = ['title',"url"]
 #
 admin.site.site_header = '深圳气象局高性能网后台管理-平台简介'
 admin.site.site_title = '深圳气象局高性能-平台简介'

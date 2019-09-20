@@ -111,69 +111,29 @@
       <section class="content">
         <div class="col_lg_10 top"></div>
         <div class="clearfix"></div>
-        <div class="col_lg_5">
+        <div class="col_lg_10">
           <div class="info">
-            <div class="title">
-              <a href="notices.html">通知公告</a>
-              <span class="right_more">
-                <a href="notices.html">更多 >>
-                 </a>
-              </span>
-            </div>
-            <ul>
-              <li>
-                <a href="" target="_blank">
-                  <span class="s-dt pku-red">06-14</span>
-                  <span class="s-title">毛有东课题组与合作者在《自然》发表NLRP3炎症小体激活新机制
-                    <span style="color:#8C0000;font-style:italic;font-family:Arial;float:none;width:40px;">new</span></span>
-                </a>
-              </li>
-              <li>
-                <a href="2019051001.html" target="_blank">
-                  <span class="s-dt pku-red">05-10</span>
-                  <span class="s-title">第三届“神威杯”国产CPU并行应用挑战赛赛前培训-北京大学站</span></a>
-              </li>
-              <li>
-                <a href="20190423.html" target="_blank">
-                  <span class="s-dt pku-red">04-23</span>
-                  <span class="s-title">北大高性能计算兴趣小组第二次活动</span></a>
-              </li>
-              <li>
-                <a href="20190415.html" target="_blank">
-                  <span class="s-dt pku-red">04-15</span>
-                  <span class="s-title">北大高性能计算兴趣小组介绍暨首次活动</span></a>
-              </li>
-            <ul>
-          </div>
-        </div>
-      
-        <div class="col_lg_25 col_md_5">
-          <div class="info-cap">
-            <a href="http://pkunews.pku.edu.cn/xxfz/2018-11/20/content_305163.htm" target="_blank">
-              <img class="cap-img" src="img/news/img_gxn_news20181120.jpg" /></a>
-            <div class="title">最新动态</div>
-            <div class="detail">
-              <a href="http://pkunews.pku.edu.cn/xxfz/2018-11/20/content_305163.htm" target="_blank">物理学院肖云峰/龚旗煌课题组在微腔非线性光学研究中取得重要突破</a></div>
-            <div class="cap-more">
-              <a href="news.html">更多&gt;</a></div>
-          </div>
-        </div>
-       
-        <div class="col_lg_25 col_md_5">
-          <div class="info-cap info-cap-right">
-            <a href="http://pkunews.pku.edu.cn/xwzh/2018-10/26/content_304753.htm">
-              <img class="cap-img" src="img/news/img_gxn_news20181119.jpg" /></a>
-            <div class="title">最新动态</div>
-            <div class="detail">
-              <a href="http://pkunews.pku.edu.cn/xxfz/2018-11/14/content_305080.htm">物理学院毛有东课题组在Nature发文 蛋白质机器动力学研究取得重大突破</a></div>
-            <div class="cap-more">
-              <a href="news.html">更多&gt;</a></div>
+          {{about.content|safe}}
+
           </div>
         </div>
 
         <div class="clearfix"></div>
         <div class="col_lg_10">
           <div class="info-app">
+            <ul>
+            {% for each_link in links %}
+              <li id="app-1">
+                <a href="{{ each_link.url}}" target="_blank">
+                  <span class="app-ico">
+                    <img src="/media/{{ each_link.link_logo }}" /></span>
+                  <span class="app-name">{{ each_link.title}}</span></a>
+              </li>
+
+             {% empty %}
+            持续更新中...
+            {% endfor %}
+            </ul>
             <ul>
               <li id="app-1">
                 <a href="http://www.nsccwx.cn/introduction.php?word=introduction&i=34" target="_blank">
@@ -194,46 +154,8 @@
                   <span class="app-name">国家超级计算深圳中心</span></a>
               </li>
             </ul>
-            <ul>
-              <li id="app-1">
-                <a href="http://www.nscc-tj.gov.cn/index.asp" target="_blank">
-                  <span class="app-ico">
-                    <img src="img/icon5.jpg" /></span>
-                  <span class="app-name">国家超级计算天津中心</span></a>
-              </li>
-              <li id="app-2">
-                <a href="http://www.ssc.net.cn/index.aspx" target="_blank">
-                  <span class="app-ico">
-                    <img src="img/icon6.jpg" /></span>
-                  <span class="app-name">上海超级计算中心</span></a>
-              </li>
-              <li id="app-3">
-                <a href="http://www.nsccjn.cn/" target="_blank">
-                  <span class="app-ico">
-                    <img src="img/icon7.jpg" /></span>
-                  <span class="app-name">国家超级计算济南中心</span></a>
-              </li>
-            </ul>
-            <ul>
-              <li id="app-1">
-                <a href="http://www.nersc.gov/" target="_blank">
-                  <span class="app-ico">
-                    <img src="img/icon8.jpg" /></span>
-                  <span class="app-name">美国能源部计算中心</span></a>
-              </li>
-              <li id="app-2">
-                <a href="https://www.top500.org/" target="_blank">
-                  <span class="app-ico">
-                    <img src="img/icon9.jpg" /></span>
-                  <span class="app-name">全球TOP500排行榜</span></a>
-              </li>
-              <li id="app-3">
-                <a href="http://www.hpc100.cn/" target="_blank">
-                  <span class="app-ico">
-                    <img src="img/icon10.jpg" /></span>
-                  <span class="app-name">中国TOP100排行榜</span></a>
-              </li>
-            </ul>
+
+
           </div>
         </div>
         <div class="clearfix"></div>
